@@ -56,16 +56,16 @@ articleFiles.forEach(file => {
 const serverParams = {
   port: 8080,
   host: "0.0.0.0",
-  root: path.join(__dirname, newsletterFolder),
-  open: "/output.html",
-  file: "output.html",
+  root: path.join(__dirname),
+  open: "/index.html",
+  file: "index.html",
   wait: 1000,
   mount: [['/images', './images']],
   logLevel: 2
 };
 
 console.log("🚀 Starting live server...");
-console.log(`📱 Opening http://localhost:8080/output.html`);
+console.log(`📱 Opening http://localhost:8080/index.html`);
 console.log("Press Ctrl+C to stop");
 
 liveServer.start(serverParams);
