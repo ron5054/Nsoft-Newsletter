@@ -75,15 +75,26 @@ function buildJson(directoryName) {
 module.exports = buildJson;
 ```
 
-### 4. עדכון סקריפט הקומפילציה
-ערוך את `compileNewsletter.js`:
+### 4. עדכון סקריפט הפיתוח
+ערוך את `dev-server.js`:
 ```javascript
 const newsletterFolder = "newsletter-XX"; // שנה את השורה הזו
 ```
 
-### 5. קומפילציה של הניוזלטר
+### 5. הפעלת סביבת הפיתוח
 ```bash
-cd packages/html-emails/newsletter
+npm run dev
+```
+
+הסקריפט יבצע:
+- קומפילציה ראשונית של הניוזלטר
+- מעקב אחר שינויים בקבצים (auto-recompile)
+- הפעלת live server ב-http://localhost:8080/output.html
+- רענון אוטומטי של הדפדפן כשהקבצים משתנים
+
+### 6. קומפילציה ידנית (אופציונלי)
+אם נדרש רק לקמפל ללא live server:
+```bash
 node compileNewsletter.js
 ```
 
@@ -122,7 +133,9 @@ newsletter-XX/
 ## הערות חשובות
 - תמיד השתמש ב-`<div dir="rtl">` לתוכן עברי
 - וודא שכל כתובות הלינקדאין מלאות ועובדות
-- בדוק קומפילציה לפני סיום
+- השתמש ב-`npm run dev` לפיתוח עם live reload
+- הדפדפן יפתח אוטומטית ב-http://localhost:8080/output.html
+- שינויים בקבצים יגרמו לקומפילציה ורענון אוטומטי
 - שמור על תוכן תמציתי אך בעל ערך
 - שמור על פורמט עקבי בכל המאמרים
 
