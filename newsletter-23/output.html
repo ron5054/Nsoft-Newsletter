@@ -1,210 +1,396 @@
 <html dir="rtl">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Raleway:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <base target="_blank" />
-    <title>nSoft</title>
-    <style type="text/css">
-      body * { /* font-family: "Raleway", Arial, sans-serif; */ font-family:
-      "Noto Sans Hebrew", sans-serif; } td[class].play { font-family: "Playfair
-      Display", Georgia, Times, serif !important; } td[class].rale {
-      font-family: "Raleway", Helvetica, Arial, sans-serif !important; } span {
-      direction: rtl; } div, p, a, li, td { -webkit-text-size-adjust: none; } *
-      { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-      } td { word-break: break-word; } a { word-break: break-word;
-      text-decoration: none; color: inherit; } body .ReadMsgBody { width: 100%;
-      background-color: #f5f5f5; } body .ExternalClass { width: 100%;
-      background-color: #f5f5f5; } body { width: 100%; height: 100%;
-      background-color: #f5f5f5; margin: 0; padding: 0; -webkit-font-smoothing:
-      antialiased; } html { background-color: #f5f5f5; width: 100%; } p {
-      padding: 0 !important; margin-top: 0 !important; margin-right: 0
-      !important; margin-bottom: 0 !important; margin-left: 0 !important; } img
-      { user-drag: none; -moz-user-select: none; -webkit-user-drag: none; }
-      .hover:hover { opacity: 0.85; filter: alpha(opacity=85); } .img600 img {
-      width: 600px; height: auto; } .radius10 img { border-radius: 10px
-      !important; }
-    </style>
-    <style type="text/css">
-      @media only screen and (max-width: 820px) { .wrap { width: 100%
-      !important; clear: both; } .pad20 { padding-left: 20px !important;
-      padding-right: 20px !important; text-align: center !important; clear:
-      both; } .padl10 { padding-left: 10px !important; clear: both; } }
-    </style>
-    <style type="text/css">
-      @media only screen and (max-width: 640px) { body { width: auto !important;
-      } .wrap { width: 100% !important; clear: both; } .full { width: 100%
-      !important; clear: both; } .mobile { width: 100% !important; padding-left:
-      30px; padding-right: 30px; clear: both; } .fullCenter { width: 100%
-      !important; text-align: center !important; clear: both; } .fullLeft {
-      width: 100% !important; text-align: left !important; clear: both; } .erase
-      { display: none; } .buttonScale { float: none !important; text-align:
-      center !important; display: inline-block !important; clear: both; } .pad20
-      { padding-left: 20px !important; padding-right: 20px !important;
-      text-align: center !important; clear: both; } .pad30 { padding-left: 30px
-      !important; padding-right: 30px !important; text-align: center !important;
-      clear: both; } .mcenter { text-align: center !important; vertical-align:
-      middle; clear: both !important; float: none; margin: 0px !important; }
-      .h20 { width: 100% !important; height: 20px !important; } .h30 { width:
-      100% !important; height: 30px !important; } .pad20 { padding-left: 20px
-      !important; padding-right: 20px !important; text-align: center !important;
-      clear: both; } .padl10 { padding-left: 10px !important; clear: both; }
-      .img600 img { width: 100% !important; } .imgfull img { width: 100%
-      !important; } }
-    </style>
-    <style type="text/css">
-      @media only screen and (max-width: 479px) { body { width: auto !important;
-      } .wrap { width: 100% !important; clear: both; } .full { width: 100%
-      !important; clear: both; } .mobile { width: 100% !important; padding-left:
-      30px; padding-right: 30px; clear: both; } .fullCenter { width: 100%
-      !important; text-align: center !important; clear: both; } .fullLeft {
-      width: 100% !important; text-align: left !important; clear: both; } .erase
-      { display: none; } .buttonScale { float: none !important; text-align:
-      center !important; display: inline-block !important; clear: both; } .pad20
-      { padding-left: 20px !important; padding-right: 20px !important;
-      text-align: center !important; clear: both; } .pad30 { padding-left: 30px
-      !important; padding-right: 30px !important; text-align: center !important;
-      clear: both; } .mcenter { text-align: center; vertical-align: middle;
-      clear: both !important; float: none; margin: 0px !important; } .h20 {
-      width: 100% !important; height: 20px !important; } .h30 { width: 100%
-      !important; height: 30px !important; } .pad20 { padding-left: 20px
-      !important; padding-right: 20px !important; text-align: center !important;
-      clear: both; } .padl10 { padding-left: 10px !important; clear: both; }
-      .img600 img { width: 100% !important; } .imgfull img { width: 100%
-      !important; } }
-    </style>
-    <style>li {margin-top: 10px}</style>
-  </head>
-  <body style="margin: 0; padding: 0">
-    <table
-      width="100%"
-      bgcolor="#EAEAEA"
-      cellspacing="0"
-      cellpadding="0"
-      border="0"
-      align="center"
-      style="width: 100%; background: #eaeaea"
-    >
-      <tbody>
-        <tr>
-          <td>
-            <!-- Top module -->
-            <table
-              class="wrap"
-              style="
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <base target="_blank" />
+  <title>nSoft</title>
+  <style type="text/css">
+    body * {
+      /* font-family: "Raleway", Arial, sans-serif; */
+      font-family:
+        "Noto Sans Hebrew", sans-serif;
+    }
+
+    td[class].play {
+      font-family: "Playfair
+ Display", Georgia, Times, serif !important; } td[class].rale {
+ font-family: "Raleway", Helvetica, Arial, sans-serif !important;
+    }
+
+    span {
+      direction: rtl;
+    }
+
+    div,
+    p,
+    a,
+    li,
+    td {
+      -webkit-text-size-adjust: none;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    td {
+      word-break: break-word;
+    }
+
+    a {
+      word-break: break-word;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    body .ReadMsgBody {
+      width: 100%;
+      background-color: #f5f5f5;
+    }
+
+    body .ExternalClass {
+      width: 100%;
+      background-color: #f5f5f5;
+    }
+
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing:
+        antialiased;
+    }
+
+    html {
+      background-color: #f5f5f5;
+      width: 100%;
+    }
+
+    p {
+      padding: 0 !important;
+      margin-top: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: 0 !important;
+      margin-left: 0 !important;
+    }
+
+    img {
+      user-drag: none;
+      -moz-user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .hover:hover {
+      opacity: 0.85;
+      filter: alpha(opacity=85);
+    }
+
+    .img600 img {
+      width: 600px;
+      height: auto;
+    }
+
+    .radius10 img {
+      border-radius: 10px !important;
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width: 820px) {
+      .wrap {
+        width: 100% !important;
+        clear: both;
+      }
+
+      .pad20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        text-align: center !important;
+        clear:
+          both;
+      }
+
+      .padl10 {
+        padding-left: 10px !important;
+        clear: both;
+      }
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width: 640px) {
+      body {
+        width: auto !important;
+      }
+
+      .wrap {
+        width: 100% !important;
+        clear: both;
+      }
+
+      .full {
+        width: 100% !important;
+        clear: both;
+      }
+
+      .mobile {
+        width: 100% !important;
+        padding-left:
+          30px;
+        padding-right: 30px;
+        clear: both;
+      }
+
+      .fullCenter {
+        width: 100% !important;
+        text-align: center !important;
+        clear: both;
+      }
+
+      .fullLeft {
+        width: 100% !important;
+        text-align: left !important;
+        clear: both;
+      }
+
+      .erase {
+        display: none;
+      }
+
+      .buttonScale {
+        float: none !important;
+        text-align:
+          center !important;
+        display: inline-block !important;
+        clear: both;
+      }
+
+      .pad20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        text-align: center !important;
+        clear: both;
+      }
+
+      .pad30 {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        text-align: center !important;
+        clear: both;
+      }
+
+      .mcenter {
+        text-align: center !important;
+        vertical-align:
+          middle;
+        clear: both !important;
+        float: none;
+        margin: 0px !important;
+      }
+
+      .h20 {
+        width: 100% !important;
+        height: 20px !important;
+      }
+
+      .h30 {
+        width:
+          100% !important;
+        height: 30px !important;
+      }
+
+      .pad20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        text-align: center !important;
+        clear: both;
+      }
+
+      .padl10 {
+        padding-left: 10px !important;
+        clear: both;
+      }
+
+      .img600 img {
+        width: 100% !important;
+      }
+
+      .imgfull img {
+        width: 100% !important;
+      }
+    }
+  </style>
+  <style type="text/css">
+    @media only screen and (max-width: 479px) {
+      body {
+        width: auto !important;
+      }
+
+      .wrap {
+        width: 100% !important;
+        clear: both;
+      }
+
+      .full {
+        width: 100% !important;
+        clear: both;
+      }
+
+      .mobile {
+        width: 100% !important;
+        padding-left:
+          30px;
+        padding-right: 30px;
+        clear: both;
+      }
+
+      .fullCenter {
+        width: 100% !important;
+        text-align: center !important;
+        clear: both;
+      }
+
+      .fullLeft {
+        width: 100% !important;
+        text-align: left !important;
+        clear: both;
+      }
+
+      .erase {
+        display: none;
+      }
+
+      .buttonScale {
+        float: none !important;
+        text-align:
+          center !important;
+        display: inline-block !important;
+        clear: both;
+      }
+
+      .pad20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        text-align: center !important;
+        clear: both;
+      }
+
+      .pad30 {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        text-align: center !important;
+        clear: both;
+      }
+
+      .mcenter {
+        text-align: center;
+        vertical-align: middle;
+        clear: both !important;
+        float: none;
+        margin: 0px !important;
+      }
+
+      .h20 {
+        width: 100% !important;
+        height: 20px !important;
+      }
+
+      .h30 {
+        width: 100% !important;
+        height: 30px !important;
+      }
+
+      .pad20 {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        text-align: center !important;
+        clear: both;
+      }
+
+      .padl10 {
+        padding-left: 10px !important;
+        clear: both;
+      }
+
+      .img600 img {
+        width: 100% !important;
+      }
+
+      .imgfull img {
+        width: 100% !important;
+      }
+    }
+  </style>
+  <style>
+    li {
+      margin-top: 10px
+    }
+  </style>
+</head>
+
+<body style="margin: 0; padding: 0">
+  <table width="100%" bgcolor="#EAEAEA" cellspacing="0" cellpadding="0" border="0" align="center"
+    style="width: 100%; background: #eaeaea">
+    <tbody>
+      <tr>
+        <td>
+          <!-- Top module -->
+          <table class="wrap" style="
                 width: 800px;
                 background: #f1af00 url('images/headerbg2.png') center top
                   no-repeat;
-              "
-              width="800"
-              cellspacing="0"
-              cellpadding="0"
-              border="0"
-              align="center"
-              bgcolor="#F1AF00"
-              background="images/headerbg2.png"
-            >
-              <tr>
-                <td
-                  style="font-size: 1px; line-height: 1px"
-                  width="100%"
-                  class="pad20"
-                >
-                  <table
-                    class="wrap"
-                    style="width: 740px"
-                    width="740"
-                    cellspacing="0"
-                    cellpadding="0"
-                    border="0"
-                    align="center"
-                  >
-                    <tr>
-                      <td
-                        colspan="2"
-                        style="font-size: 1px; line-height: 1px"
-                        width="100%"
-                        height="38"
-                      >
-                        &nbsp;
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                        class="logo"
-                        style="line-height: 1px"
-                        valign="middle"
-                        align="left"
-                      >
-                        <a href="#" style="text-decoration: none">
-                          <img
-                            src="https://media.licdn.com/dms/image/v2/D4D0BAQFeMnr__zt2Ew/company-logo_200_200/company-logo_200_200/0/1704995304827/nsoft_team_logo?e=1759363200&v=beta&t=GaqZEdFyRKfQQtqzzmMKJD2mksogOn3q1fCpg4w54_g"
-                            alt="nSoft"
-                            class="hover"
-                            width="77"
-                            border="0"
-                          />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                        colspan="2"
-                        height="30"
-                        style="font-size: 1px; line-height: 1px"
-                      >
-                        &nbsp;
-                      </td>
-                    </tr>
-                  </table>
-                  <table
-                    class="full"
-                    style="
+              " width="800" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F1AF00"
+            background="images/headerbg2.png">
+            <tr>
+              <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
+                <table class="wrap" style="width: 740px" width="740" cellspacing="0" cellpadding="0" border="0"
+                  align="center">
+                  <tr>
+                    <td colspan="2" style="font-size: 1px; line-height: 1px" width="100%" height="38">
+                      &nbsp;
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="logo" style="line-height: 1px" valign="middle" align="left">
+                      <a href="#" style="text-decoration: none">
+                        <img
+                          src="https://media.licdn.com/dms/image/v2/D4D0BAQFeMnr__zt2Ew/company-logo_200_200/company-logo_200_200/0/1704995304827/nsoft_team_logo?e=1759363200&v=beta&t=GaqZEdFyRKfQQtqzzmMKJD2mksogOn3q1fCpg4w54_g"
+                          alt="nSoft" class="hover" width="77" border="0" />
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" height="30" style="font-size: 1px; line-height: 1px">
+                      &nbsp;
+                    </td>
+                  </tr>
+                </table>
+                <table class="full" style="
                       width: 600px;
                       border-radius: 20px;
                       background: #ffffff url('images/black.png') left top
                         repeat-y;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    "
-                    width="600"
-                    cellspacing="0"
-                    cellpadding="0"
-                    border="0"
-                    align="center"
-                    bgcolor="#ffffff"
-                  >
-                    <tr>
-                      <td align="right" class="pad30">
-                        <table
-                          class="full"
-                          style="width: 520px; border-radius: 20px"
-                          width="520"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          align="center"
-                        >
-                          <tr>
-                            <td
-                              width="100%"
-                              height="20"
-                              style="font-size: 1px; line-height: 1px"
-                            >
-                              &nbsp;
-                            </td>
-                          </tr>
+                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+                  <tr>
+                    <td align="right" class="pad30">
+                      <table class="full" style="width: 520px; border-radius: 20px" width="520" cellspacing="0"
+                        cellpadding="0" border="0" align="center">
+                        <tr>
+                          <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            &nbsp;
+                          </td>
+                        </tr>
 
-                          <tr>
-                            <td
-                              style="
+                        <tr>
+                          <td style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -212,12 +398,8 @@
                                 font-size: 28px;
                                 text-align: right;
                                 line-height: 1.5;
-                              "
-                              align="left"
-                              class="play"
-                            >
-                              <div
-                                style="
+                              " align="left" class="play">
+                            <div style="
                                   direction: rtl;
                                   text-align: right;
                                   color: #f1af00;
@@ -225,24 +407,18 @@
                                   font-weight: 500;
                                   font-family: 'Playfair Display', Georgia,
                                     Times, serif;
-                                "
-                              >
-                                AI Agents - מהמעבדה לשטח
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              width="100%"
-                              height="20"
-                              style="font-size: 1px; line-height: 1px"
-                            >
-                              &nbsp;
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              style="
+                                ">
+                              AI Agents - מהמעבדה לשטח
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            &nbsp;
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -250,106 +426,74 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              "
-                              align="left"
-                              class="rale"
-                            >
-                              <div dir="rtl">
-                                <p>היי {{subscriber.first_name}}!</p>
-                                <br />
+                              " align="left" class="rale">
+                            <div dir="rtl">
+                              <p>היי {{subscriber.first_name}}!</p>
+                              <br />
 
-                                <div dir="rtl">
+                              <div dir="rtl">
   <h2>AI Agents - מהמעבדה לשטח</h2>
   <p>
     השבוע אנחנו עוברים מהתיאוריה למעשה - איך AI Agents הופכים מכלי מעניין לכלי עבודה אמיתי. 
     מהסקייל של Big Data ועד ניטור וואטסאפ, מהפיכת עיצובים לקוד ועד הבנת ההבדלים בין כלי הפיתוח.
   </p>
   <p>
-    כל המאמרים השבוע מראים איך AI Agents לא רק עוזרים - אלא הופכים קריטיים כשהאתגרים הופכים אמיתיים.
+    כל המאמרים השבוע מראים איך AI Agents לא רק עוזרים לנו - אלא הופכים קריטיים כשהאתגרים הופכים אמיתיים.
   </p>
 </div>
 
 
-                                <p>&nbsp;</p>
+                              <p>&nbsp;</p>
 
-                                <p>שלך,</p>
+                              <p>שלך,</p>
 
-                                <p>נדב ליבוביץ&#39;</p>
+                              <p>נדב ליבוביץ&#39;</p>
 
-                                <p>
-                                  מייסד,
-                                  <a
-                                    href="https://bit.ly/nsoft-onepager"
-                                    style="
+                              <p>
+                                מייסד,
+                                <a href="https://nsoft.co.il" style="
                                       color: #f1af00;
                                       text-decoration: none;
-                                    "
-                                  >
-                                    nSoft
-                                  </a>
-                                </p>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td
-                              width="100%"
-                              height="30"
-                              style="font-size: 1px; line-height: 1px"
-                            >
-                              &nbsp;
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td
-                  style="font-size: 1px; line-height: 1px"
-                  width="100%"
-                  height="20"
-                >
-                  &nbsp;
-                </td>
-              </tr>
-            </table>
-            <!-- email body -->
+                                    ">
+                                  nSoft
+                                </a>
+                              </p>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
+                            &nbsp;
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 1px; line-height: 1px" width="100%" height="20">
+                &nbsp;
+              </td>
+            </tr>
+          </table>
+          <!-- email body -->
 
-            <table
-              class="wrap"
-              style="width: 800px; background: #ffffff"
-              width="800"
-              cellspacing="0"
-              cellpadding="0"
-              border="0"
-              align="center"
-              bgcolor="#ffffff"
-            >
-              <!-- Block seperator -->
-              <tr>
-                <td
-                  style="font-size: 1px; line-height: 1px"
-                  width="100%"
-                  height="30"
-                >
-                  &nbsp;
-                </td>
-              </tr>
-              <!-- /Block seperator -->
+          <table class="wrap" style="width: 800px; background: #ffffff" width="800" cellspacing="0" cellpadding="0"
+            border="0" align="center" bgcolor="#ffffff">
+            <!-- Block seperator -->
+            <tr>
+              <td style="font-size: 1px; line-height: 1px" width="100%" height="30">
+                &nbsp;
+              </td>
+            </tr>
+            <!-- /Block seperator -->
 
-                <!-- Article block -->
-                <tr>
-                  <td
-                    style="font-size: 1px; line-height: 1px"
-                    width="100%"
-                    class="pad20"
-                  >
-                    <table
-                      class="full"
-                      style="
+              <!-- Article block -->
+              <tr>
+                <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
+                  <table class="full" style="
                       width: 600px;
                       -webkit-border-top-left-radius: 20px;
                       -webkit-border-top-right-radius: 20px;
@@ -359,64 +503,34 @@
                       border-top-right-radius: 20px;
                       background: #ffffff;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    "
-                      width="600"
-                      cellspacing="0"
-                      cellpadding="0"
-                      border="0"
-                      align="center"
-                      bgcolor="#ffffff"
-                    >
-                      <tr>
-                        <td width="100%" align="right" class="pad30">
-                          <table
-                            class="full"
-                            style="
+                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+                    <tr>
+                      <td width="100%" align="right" class="pad30">
+                        <table class="full" style="
                             width: 520px;
                             border-radius: 20px;
                             background: #ffffff;
-                          "
-                            width="520"
-                            cellspacing="0"
-                            cellpadding="0"
-                            border="0"
-                            align="center"
-                          >
-                            <tr>
-                              <td
-                                width="100%"
-                                height="40"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td width="100%" class="imgfull radius10">
-                                <a href="https://www.youtube.com/watch?v&#x3D;12v5S1n1eOY" style="text-decoration: none">
-                                  <img
-                                    src="https://img.youtube.com/vi/12v5S1n1eOY/maxresdefault.jpg"
-                                    alt="Agentic AI - כשהסקייל הופך קריטי"
-                                    class="hover"
-                                    width="520"
-                                    border="0"
-                                  />
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="20"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <!-- Article Headline  -->
-                              <td
-                                style="
+                          " width="520" cellspacing="0" cellpadding="0" border="0" align="center">
+                          <tr>
+                            <td width="100%" height="40" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" class="imgfull radius10">
+                              <a href="https://www.youtube.com/watch?v&#x3D;12v5S1n1eOY" style="text-decoration: none">
+                                <img src="https://img.youtube.com/vi/12v5S1n1eOY/maxresdefault.jpg" alt="Agentic AI - כשהסקייל הופך קריטי" class="hover" width="520" border="0" />
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Article Headline  -->
+                            <td style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -424,26 +538,18 @@
                                 font-size: 24px;
                                 text-align: right;
                                 line-height: 1.5;
-                              "
-                                align="left"
-                                class="play"
-                              >
-                                <div dir="rtl">Agentic AI - כשהסקייל הופך קריטי</div>
-                              </td>
-                              <!-- /Article Headline  -->
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="20"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                style="
+                              " align="left" class="play">
+                              <div dir="rtl">Agentic AI - כשהסקייל הופך קריטי</div>
+                            </td>
+                            <!-- /Article Headline  -->
+                          </tr>
+                          <tr>
+                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -451,12 +557,9 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              "
-                                align="left"
-                                class="rale"
-                              >
-                                <!-- Article Text  -->
-                                <div dir="rtl">
+                              " align="left" class="rale">
+                              <!-- Article Text  -->
+                              <div dir="rtl">
   <p>
     n8n זה נחמד לפלואו פשוט, אבל בעולם האמיתי של Big Data זה לא מספיק. Ben Kus מ-Box מראה איך Agentic AI הופך קריטי כשמדובר בכמויות עצומות של מסמכים וחוזים.
   </p>
@@ -468,54 +571,30 @@
   </p>
 </div>
 
-                                <!-- /Article Text  -->
-                              </td>
-                            </tr>
+                              <!-- /Article Text  -->
+                            </td>
+                          </tr>
 
-                            <tr>
-                              <td
-                                width="100%"
-                                height="30"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td width="100%" align="center" class="">
-                                <table
-                                  align="left"
-                                  cellspacing="0"
-                                  cellpadding="0"
-                                  border="0"
-                                  class="hover"
-                                >
-                                  <tr>
-                                    <td
-                                      width="100%"
-                                      align="center"
-                                      class=""
-                                      style="
+                          <tr>
+                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" align="center" class="">
+                              <table align="left" cellspacing="0" cellpadding="0" border="0" class="hover">
+                                <tr>
+                                  <td width="100%" align="center" class="" style="
                                       background: #f1af00;
                                       border-radius: 5px;
-                                    "
-                                      bgcolor="#F1AF00"
-                                    >
-                                      <table
-                                        width="100%"
-                                        align="left"
-                                        cellspacing="0"
-                                        cellpadding="0"
-                                        style="
+                                    " bgcolor="#F1AF00">
+                                    <table width="100%" align="left" cellspacing="0" cellpadding="0" style="
                                         margin-right: 30px;
                                         mso-padding-left-alt: 15px;
                                         mso-padding-right-alt: 15px;
-                                      "
-                                      >
-                                        <tr>
-                                          <td
-                                            height="35"
-                                            style="
+                                      ">
+                                      <tr>
+                                        <td height="35" style="
                                             mso-padding-alt: 0px 10px 0px 10px;
                                             color: #ffffff;
                                             font-family: Helvetica, Arial,
@@ -523,79 +602,53 @@
                                             font-weight: 700;
                                             font-size: 14px;
                                             text-transform: uppercase;
-                                          "
-                                            align="center"
-                                            class="pop"
-                                          >
-                                            <a
-                                              href="https://www.youtube.com/watch?v&#x3D;12v5S1n1eOY"
-                                              target="_blank"
-                                              style="
+                                          " align="center" class="pop">
+                                          <a href="https://www.youtube.com/watch?v&#x3D;12v5S1n1eOY" target="_blank" style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
                                               text-decoration: none;
-                                            "
-                                            >
-                                              למאמר המלא
-                                            </a>
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="50"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="1"
-                                style="
+                                            ">
+                                            למאמר המלא
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="1" style="
                                 font-size: 1px;
                                 line-height: 1px;
                                 background: #d7d7d7;
-                              "
-                                bgcolor="#D7D7D7;"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="50"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <!-- /Article block -->
-                <!-- Article block -->
-                <tr>
-                  <td
-                    style="font-size: 1px; line-height: 1px"
-                    width="100%"
-                    class="pad20"
-                  >
-                    <table
-                      class="full"
-                      style="
+                              " bgcolor="#D7D7D7;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- /Article block -->
+              <!-- Article block -->
+              <tr>
+                <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
+                  <table class="full" style="
                       width: 600px;
                       -webkit-border-top-left-radius: 20px;
                       -webkit-border-top-right-radius: 20px;
@@ -605,64 +658,34 @@
                       border-top-right-radius: 20px;
                       background: #ffffff;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    "
-                      width="600"
-                      cellspacing="0"
-                      cellpadding="0"
-                      border="0"
-                      align="center"
-                      bgcolor="#ffffff"
-                    >
-                      <tr>
-                        <td width="100%" align="right" class="pad30">
-                          <table
-                            class="full"
-                            style="
+                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+                    <tr>
+                      <td width="100%" align="right" class="pad30">
+                        <table class="full" style="
                             width: 520px;
                             border-radius: 20px;
                             background: #ffffff;
-                          "
-                            width="520"
-                            cellspacing="0"
-                            cellpadding="0"
-                            border="0"
-                            align="center"
-                          >
-                            <tr>
-                              <td
-                                width="100%"
-                                height="40"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td width="100%" class="imgfull radius10">
-                                <a href="https://www.youtube.com/watch?v&#x3D;7B2HJr0Y68g" style="text-decoration: none">
-                                  <img
-                                    src="https://img.youtube.com/vi/7B2HJr0Y68g/maxresdefault.jpg"
-                                    alt="Claude Code Subagents - העתיד של פיתוח עם Meta Agent"
-                                    class="hover"
-                                    width="520"
-                                    border="0"
-                                  />
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="20"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <!-- Article Headline  -->
-                              <td
-                                style="
+                          " width="520" cellspacing="0" cellpadding="0" border="0" align="center">
+                          <tr>
+                            <td width="100%" height="40" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" class="imgfull radius10">
+                              <a href="https://www.youtube.com/watch?v&#x3D;7B2HJr0Y68g" style="text-decoration: none">
+                                <img src="https://img.youtube.com/vi/7B2HJr0Y68g/maxresdefault.jpg" alt="Claude Code Subagents - העתיד של פיתוח עם Meta Agent" class="hover" width="520" border="0" />
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Article Headline  -->
+                            <td style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -670,26 +693,18 @@
                                 font-size: 24px;
                                 text-align: right;
                                 line-height: 1.5;
-                              "
-                                align="left"
-                                class="play"
-                              >
-                                <div dir="rtl">Claude Code Subagents - העתיד של פיתוח עם Meta Agent</div>
-                              </td>
-                              <!-- /Article Headline  -->
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="20"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                style="
+                              " align="left" class="play">
+                              <div dir="rtl">Claude Code Subagents - העתיד של פיתוח עם Meta Agent</div>
+                            </td>
+                            <!-- /Article Headline  -->
+                          </tr>
+                          <tr>
+                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -697,74 +712,50 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              "
-                                align="left"
-                                class="rale"
-                              >
-                                <!-- Article Text  -->
-                                <div dir="rtl">
+                              " align="left" class="rale">
+                              <!-- Article Text  -->
+                              <div dir="rtl">
   <p>
     בוקר נפתח בקפה ☕, טרמינל פתוח 👩🏼‍💻, ו־prompt אחד שמריץ סוכן שמתחיל לבשל את הקוד. עוד כמה דקות ו- #ClaudeCode Subagents עושים את מה שפעם לקח שעות.
   </p>
+  <br/>
   <p>
     וככה דן, מפתח עצמאי, לקח את זה שלב קדימה. הוא לא רק משתמש בסוכנים - הוא בנה Meta Agent שמייצר אותם. סוכן שמבין את הבעיה, בונה את הפתרון, ומעדכן אותך בקול רם מה קרה. תכל'ס, מערכת שמנהלת את עצמה.
   </p>
+  <br/>
   <p>
     אבל מה? זה עובד רק אם מבינים איך הם באמת פועלים. ה־Subagents לא מדברים איתך – הם מדברים עם ה־Primary Agent. ומה שכותבים להם זה #system_prompt, לא שורת פקודה רגילה. מי שלא בונה את ה־flow נכון מבזבז טוקנים וזמן.
   </p>
+  <br/>
   <p>
     ומי שכן? מרוויח סוכנים ממוקדים, עם קונטקסט נקי, שמתמחים בדיוק במה שביקשת. אתם יכולים להחליט מתי כל סוכן יופעל, איזה כלים הוא ישתמש, ואיך הוא יחזור אליך עם התוצאה. הכל מתחיל מתיאור מדויק.
   </p>
 </div>
 
-                                <!-- /Article Text  -->
-                              </td>
-                            </tr>
+                              <!-- /Article Text  -->
+                            </td>
+                          </tr>
 
-                            <tr>
-                              <td
-                                width="100%"
-                                height="30"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td width="100%" align="center" class="">
-                                <table
-                                  align="left"
-                                  cellspacing="0"
-                                  cellpadding="0"
-                                  border="0"
-                                  class="hover"
-                                >
-                                  <tr>
-                                    <td
-                                      width="100%"
-                                      align="center"
-                                      class=""
-                                      style="
+                          <tr>
+                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" align="center" class="">
+                              <table align="left" cellspacing="0" cellpadding="0" border="0" class="hover">
+                                <tr>
+                                  <td width="100%" align="center" class="" style="
                                       background: #f1af00;
                                       border-radius: 5px;
-                                    "
-                                      bgcolor="#F1AF00"
-                                    >
-                                      <table
-                                        width="100%"
-                                        align="left"
-                                        cellspacing="0"
-                                        cellpadding="0"
-                                        style="
+                                    " bgcolor="#F1AF00">
+                                    <table width="100%" align="left" cellspacing="0" cellpadding="0" style="
                                         margin-right: 30px;
                                         mso-padding-left-alt: 15px;
                                         mso-padding-right-alt: 15px;
-                                      "
-                                      >
-                                        <tr>
-                                          <td
-                                            height="35"
-                                            style="
+                                      ">
+                                      <tr>
+                                        <td height="35" style="
                                             mso-padding-alt: 0px 10px 0px 10px;
                                             color: #ffffff;
                                             font-family: Helvetica, Arial,
@@ -772,79 +763,53 @@
                                             font-weight: 700;
                                             font-size: 14px;
                                             text-transform: uppercase;
-                                          "
-                                            align="center"
-                                            class="pop"
-                                          >
-                                            <a
-                                              href="https://www.youtube.com/watch?v&#x3D;7B2HJr0Y68g"
-                                              target="_blank"
-                                              style="
+                                          " align="center" class="pop">
+                                          <a href="https://www.youtube.com/watch?v&#x3D;7B2HJr0Y68g" target="_blank" style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
                                               text-decoration: none;
-                                            "
-                                            >
-                                              למאמר המלא
-                                            </a>
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="50"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="1"
-                                style="
+                                            ">
+                                            למאמר המלא
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="1" style="
                                 font-size: 1px;
                                 line-height: 1px;
                                 background: #d7d7d7;
-                              "
-                                bgcolor="#D7D7D7;"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="50"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <!-- /Article block -->
-                <!-- Article block -->
-                <tr>
-                  <td
-                    style="font-size: 1px; line-height: 1px"
-                    width="100%"
-                    class="pad20"
-                  >
-                    <table
-                      class="full"
-                      style="
+                              " bgcolor="#D7D7D7;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- /Article block -->
+              <!-- Article block -->
+              <tr>
+                <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
+                  <table class="full" style="
                       width: 600px;
                       -webkit-border-top-left-radius: 20px;
                       -webkit-border-top-right-radius: 20px;
@@ -854,64 +819,34 @@
                       border-top-right-radius: 20px;
                       background: #ffffff;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    "
-                      width="600"
-                      cellspacing="0"
-                      cellpadding="0"
-                      border="0"
-                      align="center"
-                      bgcolor="#ffffff"
-                    >
-                      <tr>
-                        <td width="100%" align="right" class="pad30">
-                          <table
-                            class="full"
-                            style="
+                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+                    <tr>
+                      <td width="100%" align="right" class="pad30">
+                        <table class="full" style="
                             width: 520px;
                             border-radius: 20px;
                             background: #ffffff;
-                          "
-                            width="520"
-                            cellspacing="0"
-                            cellpadding="0"
-                            border="0"
-                            align="center"
-                          >
-                            <tr>
-                              <td
-                                width="100%"
-                                height="40"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td width="100%" class="imgfull radius10">
-                                <a href="https://www.youtube.com/watch?v&#x3D;kPL-6-9MVyA" style="text-decoration: none">
-                                  <img
-                                    src="https://img.youtube.com/vi/kPL-6-9MVyA/maxresdefault.jpg"
-                                    alt="RAG בפרודקשן - למה רוב המערכות קורסות"
-                                    class="hover"
-                                    width="520"
-                                    border="0"
-                                  />
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="20"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <!-- Article Headline  -->
-                              <td
-                                style="
+                          " width="520" cellspacing="0" cellpadding="0" border="0" align="center">
+                          <tr>
+                            <td width="100%" height="40" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" class="imgfull radius10">
+                              <a href="https://www.youtube.com/watch?v&#x3D;kPL-6-9MVyA" style="text-decoration: none">
+                                <img src="https://img.youtube.com/vi/kPL-6-9MVyA/maxresdefault.jpg" alt="RAG בפרודקשן - למה רוב המערכות קורסות" class="hover" width="520" border="0" />
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Article Headline  -->
+                            <td style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -919,26 +854,18 @@
                                 font-size: 24px;
                                 text-align: right;
                                 line-height: 1.5;
-                              "
-                                align="left"
-                                class="play"
-                              >
-                                <div dir="rtl">RAG בפרודקשן - למה רוב המערכות קורסות</div>
-                              </td>
-                              <!-- /Article Headline  -->
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="20"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                style="
+                              " align="left" class="play">
+                              <div dir="rtl">RAG בפרודקשן - למה רוב המערכות קורסות</div>
+                            </td>
+                            <!-- /Article Headline  -->
+                          </tr>
+                          <tr>
+                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -946,77 +873,54 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              "
-                                align="left"
-                                class="rale"
-                              >
-                                <!-- Article Text  -->
-                                <div dir="rtl">
+                              " align="left" class="rale">
+                              <!-- Article Text  -->
+                              <div dir="rtl">
   <p>
     נכון, GPT לא יחליף אתכם. אבל RAG שמתוכנן נכון? אולי כן.
   </p>
+  <br/>
   <p>
     בעולם שבו כל אחד מריץ דמו של Agent עם 5 מסמכים ו־3 Prompts – מעט מאוד יודעים איך זה נראה כשזה צריך באמת לעבוד בפרודקשן.
   </p>
+  <br/>
   <p>
     אז Douwe Kiela, האיש שפיתח את RAG עוד בפייסבוק, לא מגיע רק מתוך תיאוריה - הוא כבר הריץ מערכות כאלה בקנה מידה ענק.
   </p>
+  <br/>
   <p>
     בהרצאה סופר ממוקדת הוא משתף תובנות אמיתיות מהשטח: למה רוב ה־RAGs קורסים בפרודקשן, למה לא המודל חשוב - אלא המערכת שמסביבו, ואיך תכנון נכון יכול להיות ההבדל בין קונספט מגניב למנוע עסקי אמיתי.
   </p>
+  <br/>
   <p>
     הרעיון הכי חזק? לא לדאוג שה־RAG שלכם יהיה מושלם. לדאוג שהוא יהיה מהיר, מדויק ומותאם למציאות של הארגון - כולל דאטה מבולגן, סקייל מטורף והמון תרחישי שימוש.
   </p>
 </div>
 
-                                <!-- /Article Text  -->
-                              </td>
-                            </tr>
+                              <!-- /Article Text  -->
+                            </td>
+                          </tr>
 
-                            <tr>
-                              <td
-                                width="100%"
-                                height="30"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td width="100%" align="center" class="">
-                                <table
-                                  align="left"
-                                  cellspacing="0"
-                                  cellpadding="0"
-                                  border="0"
-                                  class="hover"
-                                >
-                                  <tr>
-                                    <td
-                                      width="100%"
-                                      align="center"
-                                      class=""
-                                      style="
+                          <tr>
+                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" align="center" class="">
+                              <table align="left" cellspacing="0" cellpadding="0" border="0" class="hover">
+                                <tr>
+                                  <td width="100%" align="center" class="" style="
                                       background: #f1af00;
                                       border-radius: 5px;
-                                    "
-                                      bgcolor="#F1AF00"
-                                    >
-                                      <table
-                                        width="100%"
-                                        align="left"
-                                        cellspacing="0"
-                                        cellpadding="0"
-                                        style="
+                                    " bgcolor="#F1AF00">
+                                    <table width="100%" align="left" cellspacing="0" cellpadding="0" style="
                                         margin-right: 30px;
                                         mso-padding-left-alt: 15px;
                                         mso-padding-right-alt: 15px;
-                                      "
-                                      >
-                                        <tr>
-                                          <td
-                                            height="35"
-                                            style="
+                                      ">
+                                      <tr>
+                                        <td height="35" style="
                                             mso-padding-alt: 0px 10px 0px 10px;
                                             color: #ffffff;
                                             font-family: Helvetica, Arial,
@@ -1024,79 +928,53 @@
                                             font-weight: 700;
                                             font-size: 14px;
                                             text-transform: uppercase;
-                                          "
-                                            align="center"
-                                            class="pop"
-                                          >
-                                            <a
-                                              href="https://www.youtube.com/watch?v&#x3D;kPL-6-9MVyA"
-                                              target="_blank"
-                                              style="
+                                          " align="center" class="pop">
+                                          <a href="https://www.youtube.com/watch?v&#x3D;kPL-6-9MVyA" target="_blank" style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
                                               text-decoration: none;
-                                            "
-                                            >
-                                              למאמר המלא
-                                            </a>
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="50"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="1"
-                                style="
+                                            ">
+                                            למאמר המלא
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="1" style="
                                 font-size: 1px;
                                 line-height: 1px;
                                 background: #d7d7d7;
-                              "
-                                bgcolor="#D7D7D7;"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="50"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <!-- /Article block -->
-                <!-- Article block -->
-                <tr>
-                  <td
-                    style="font-size: 1px; line-height: 1px"
-                    width="100%"
-                    class="pad20"
-                  >
-                    <table
-                      class="full"
-                      style="
+                              " bgcolor="#D7D7D7;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- /Article block -->
+              <!-- Article block -->
+              <tr>
+                <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
+                  <table class="full" style="
                       width: 600px;
                       -webkit-border-top-left-radius: 20px;
                       -webkit-border-top-right-radius: 20px;
@@ -1106,64 +984,34 @@
                       border-top-right-radius: 20px;
                       background: #ffffff;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    "
-                      width="600"
-                      cellspacing="0"
-                      cellpadding="0"
-                      border="0"
-                      align="center"
-                      bgcolor="#ffffff"
-                    >
-                      <tr>
-                        <td width="100%" align="right" class="pad30">
-                          <table
-                            class="full"
-                            style="
+                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+                    <tr>
+                      <td width="100%" align="right" class="pad30">
+                        <table class="full" style="
                             width: 520px;
                             border-radius: 20px;
                             background: #ffffff;
-                          "
-                            width="520"
-                            cellspacing="0"
-                            cellpadding="0"
-                            border="0"
-                            align="center"
-                          >
-                            <tr>
-                              <td
-                                width="100%"
-                                height="40"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td width="100%" class="imgfull radius10">
-                                <a href="https://www.youtube.com/watch?v&#x3D;i0P56Pm1Q3U" style="text-decoration: none">
-                                  <img
-                                    src="https://img.youtube.com/vi/i0P56Pm1Q3U/maxresdefault.jpg"
-                                    alt="Claude Code vs Cursor - ההבדל האמיתי"
-                                    class="hover"
-                                    width="520"
-                                    border="0"
-                                  />
-                                </a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="20"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <!-- Article Headline  -->
-                              <td
-                                style="
+                          " width="520" cellspacing="0" cellpadding="0" border="0" align="center">
+                          <tr>
+                            <td width="100%" height="40" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" class="imgfull radius10">
+                              <a href="https://www.youtube.com/watch?v&#x3D;i0P56Pm1Q3U" style="text-decoration: none">
+                                <img src="https://img.youtube.com/vi/i0P56Pm1Q3U/maxresdefault.jpg" alt="Claude Code vs Cursor - ההבדל האמיתי" class="hover" width="520" border="0" />
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <!-- Article Headline  -->
+                            <td style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -1171,26 +1019,18 @@
                                 font-size: 24px;
                                 text-align: right;
                                 line-height: 1.5;
-                              "
-                                align="left"
-                                class="play"
-                              >
-                                <div dir="rtl">Claude Code vs Cursor - ההבדל האמיתי</div>
-                              </td>
-                              <!-- /Article Headline  -->
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="20"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                style="
+                              " align="left" class="play">
+                              <div dir="rtl">Claude Code vs Cursor - ההבדל האמיתי</div>
+                            </td>
+                            <!-- /Article Headline  -->
+                          </tr>
+                          <tr>
+                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -1198,74 +1038,50 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              "
-                                align="left"
-                                class="rale"
-                              >
-                                <!-- Article Text  -->
-                                <div dir="rtl">
+                              " align="left" class="rale">
+                              <!-- Article Text  -->
+                              <div dir="rtl">
   <p>
     "Cursor מרגיש כמו עוזר. Claude Code מרגיש כמו מתכנת." זו התשובה לשאלה מה ההבדל.
   </p>
+  <br/>
   <p>
     מישהו פירק את Claude Code לגורמים וגילה: הכוח האמיתי הוא לא בקוד, אלא ב-prompt. אלפי שורות system prompt שמנחות איך לחשוב, לתעדף משימות, לקרוא לכלים ואפילו לשכוח מידע בזמן ריצה.
   </p>
+  <br/>
   <p>
     ההבדל הגדול: ב-Claude Code יש שליטה מלאה על orchestration של ה-agent. אפשר לבנות workflows מותאמים, להפעיל sub-agents עם prompts נפרדים, ולקבל סביבת פיתוח שמרגישה כמו צוות מפתחים עצמאי.
   </p>
-  <p>
+  <br/>
+  <p> 
     זה לא רק כלי - זה שינוי תפיסתי באיך עובדים עם AI בפיתוח.
   </p>
 </div>
 
-                                <!-- /Article Text  -->
-                              </td>
-                            </tr>
+                              <!-- /Article Text  -->
+                            </td>
+                          </tr>
 
-                            <tr>
-                              <td
-                                width="100%"
-                                height="30"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td width="100%" align="center" class="">
-                                <table
-                                  align="left"
-                                  cellspacing="0"
-                                  cellpadding="0"
-                                  border="0"
-                                  class="hover"
-                                >
-                                  <tr>
-                                    <td
-                                      width="100%"
-                                      align="center"
-                                      class=""
-                                      style="
+                          <tr>
+                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" align="center" class="">
+                              <table align="left" cellspacing="0" cellpadding="0" border="0" class="hover">
+                                <tr>
+                                  <td width="100%" align="center" class="" style="
                                       background: #f1af00;
                                       border-radius: 5px;
-                                    "
-                                      bgcolor="#F1AF00"
-                                    >
-                                      <table
-                                        width="100%"
-                                        align="left"
-                                        cellspacing="0"
-                                        cellpadding="0"
-                                        style="
+                                    " bgcolor="#F1AF00">
+                                    <table width="100%" align="left" cellspacing="0" cellpadding="0" style="
                                         margin-right: 30px;
                                         mso-padding-left-alt: 15px;
                                         mso-padding-right-alt: 15px;
-                                      "
-                                      >
-                                        <tr>
-                                          <td
-                                            height="35"
-                                            style="
+                                      ">
+                                      <tr>
+                                        <td height="35" style="
                                             mso-padding-alt: 0px 10px 0px 10px;
                                             color: #ffffff;
                                             font-family: Helvetica, Arial,
@@ -1273,94 +1089,59 @@
                                             font-weight: 700;
                                             font-size: 14px;
                                             text-transform: uppercase;
-                                          "
-                                            align="center"
-                                            class="pop"
-                                          >
-                                            <a
-                                              href="https://www.youtube.com/watch?v&#x3D;i0P56Pm1Q3U"
-                                              target="_blank"
-                                              style="
+                                          " align="center" class="pop">
+                                          <a href="https://www.youtube.com/watch?v&#x3D;i0P56Pm1Q3U" target="_blank" style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
                                               text-decoration: none;
-                                            "
-                                            >
-                                              למאמר המלא
-                                            </a>
-                                          </td>
-                                        </tr>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </table>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="50"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="1"
-                                style="
+                                            ">
+                                            למאמר המלא
+                                          </a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="1" style="
                                 font-size: 1px;
                                 line-height: 1px;
                                 background: #d7d7d7;
-                              "
-                                bgcolor="#D7D7D7;"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr>
-                              <td
-                                width="100%"
-                                height="50"
-                                style="font-size: 1px; line-height: 1px"
-                              >
-                                &nbsp;
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <!-- /Article block -->
+                              " bgcolor="#D7D7D7;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- /Article block -->
 
-            </table>
-            <!-- footer -->
+          </table>
+          <!-- footer -->
 
-            <table
-              align="center"
-              bgcolor="#3D4750"
-              border="0"
-              cellpadding="0"
-              cellspacing="0"
-              class="wrap"
-              style="width: 800px; background: #3d4750"
-              width="800"
-            >
-              <tbody>
-                <tr>
-                  <td align="center" class="pad20">
-                    <table
-                      align="center"
-                      bgcolor="#EDEDED"
-                      border="0"
-                      cellpadding="0"
-                      cellspacing="0"
-                      class="full"
-                      style="
+          <table align="center" bgcolor="#3D4750" border="0" cellpadding="0" cellspacing="0" class="wrap"
+            style="width: 800px; background: #3d4750" width="800">
+            <tbody>
+              <tr>
+                <td align="center" class="pad20">
+                  <table align="center" bgcolor="#EDEDED" border="0" cellpadding="0" cellspacing="0" class="full" style="
                         width: 600px;
                         -webkit-border-bottom-right-radius: 20px;
                         -webkit-border-bottom-left-radius: 20px;
@@ -1370,58 +1151,36 @@
                         border-bottom-left-radius: 20px;
                         background: #ededed;
                         box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                      "
-                      width="600"
-                    >
-                      <tbody>
-                        <tr>
-                          <td
-                            height="25"
-                            style="font-size: 1px; line-height: 1px"
-                            width="100%"
-                          >
-                            &nbsp;
-                          </td>
-                        </tr>
+                      " width="600">
+                    <tbody>
+                      <tr>
+                        <td height="25" style="font-size: 1px; line-height: 1px" width="100%">
+                          &nbsp;
+                        </td>
+                      </tr>
 
-                        <tr>
-                          <td
-                            height="30"
-                            style="font-size: 1px; line-height: 1px"
-                            width="100%"
-                          >
-                            &nbsp;
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    height="8"
-                    style="font-size: 1px; line-height: 1px"
-                    width="100%"
-                  >
-                    &nbsp;
-                  </td>
-                </tr>
-                <tr>
-                  <td class="pad20" width="100%">
-                    <table
-                      align="center"
-                      border="0"
-                      cellpadding="0"
-                      cellspacing="0"
-                      class="full"
-                      style="width: 600px"
-                      width="600"
-                    >
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div
-                              style="
+                      <tr>
+                        <td height="30" style="font-size: 1px; line-height: 1px" width="100%">
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height="8" style="font-size: 1px; line-height: 1px" width="100%">
+                  &nbsp;
+                </td>
+              </tr>
+              <tr>
+                <td class="pad20" width="100%">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" class="full" style="width: 600px"
+                    width="600">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div style="
                                 direction: rtl;
                               color: #ffffff;
                               font-family: 'Raleway', Georgia, Times, serif;
@@ -1431,159 +1190,117 @@
                               line-height: 1.5;
                               margin-top: 15px;
                               margin-bottom: 15px;
-                            "
-                            >אהבת את המייל?</div>
-                            <div style="text-align: center; direction: rtl">
-                              <div
-                                style="display: inline-block; direction: rtl"
-                              >
-                                <a
-                                  href="https://expert-leader-5465.ck.page/a232dafb70/thanks?rating=up"
-                                  target="_blank"
-                                  trigger-id="3822149"
-                                  style="color: #666666; font-size: 30px; text-decoration: none;"
-                                >
-                                  &#x1F44D;
-                                </a>
-                                <a
-                                  href="https://expert-leader-5465.ck.page/a232dafb70/thanks?rating=down"
-                                  target="_blank"
-                                  trigger-id="3822148"
-                                  style="color: #666666; font-size: 30px; text-decoration: none;"
-                                >
-                                  &#x1F44E;
-                                </a>
-                              </div>
+                            ">אהבת את המייל?</div>
+                          <div style="text-align: center; direction: rtl">
+                            <div style="display: inline-block; direction: rtl">
+                              <a href="https://expert-leader-5465.ck.page/a232dafb70/thanks?rating=up" target="_blank"
+                                trigger-id="3822149" style="color: #666666; font-size: 30px; text-decoration: none;">
+                                &#x1F44D;
+                              </a>
+                              <a href="https://expert-leader-5465.ck.page/a232dafb70/thanks?rating=down" target="_blank"
+                                trigger-id="3822148" style="color: #666666; font-size: 30px; text-decoration: none;">
+                                &#x1F44E;
+                              </a>
                             </div>
-                            <style>
-                              a:focus { color: #ffea00 !important; outline:
-                              none; } a:focus ~ a { color: #e6e6e6 !important; }
-                            </style>
+                          </div>
+                          <style>
+                            a:focus {
+                              color: #ffea00 !important;
+                              outline:
+                                none;
+                            }
 
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            height="30"
-                            style="font-size: 1px; line-height: 1px"
-                            width="100%"
-                          >
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            bgcolor="#5F6468;"
-                            height="1"
-                            style="
+                            a:focus~a {
+                              color: #e6e6e6 !important;
+                            }
+                          </style>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size: 1px; line-height: 1px" width="100%">
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td bgcolor="#5F6468;" height="1" style="
                               font-size: 1px;
                               line-height: 1px;
                               background: #5f6468;
-                            "
-                            width="100%"
-                          >
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            height="30"
-                            style="font-size: 1px; line-height: 1px"
-                            width="100%"
-                          >
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="center" width="100%">
-                            <a
-                              href="https://bit.ly/nsoft-onepager"
-                              style="text-decoration: none"
-                            ><img
-                                alt="nSoft"
-                                border="0"
-                                class="hover"
-                                src="https://cdn.prod.website-files.com/655cb5bd2de1fe156ffb8384/65689760c8ce6a1da7b1501d_nSoft%20logo.svg"
-                                width="87"
-                              />
-                            </a>
-                          </td>
-                        </tr>
+                            " width="100%">
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size: 1px; line-height: 1px" width="100%">
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" width="100%">
+                          <a href="https://bit.ly/nsoft-onepager" style="text-decoration: none"><img alt="nSoft"
+                              border="0" class="hover"
+                              src="https://cdn.prod.website-files.com/655cb5bd2de1fe156ffb8384/65689760c8ce6a1da7b1501d_nSoft%20logo.svg"
+                              width="87" />
+                          </a>
+                        </td>
+                      </tr>
 
-                        <tr>
-                          <td
-                            align="left"
-                            class="rale"
-                            direction="rtl"
-                            style="
+                      <tr>
+                        <td align="left" class="rale" direction="rtl" style="
                               color: #ffffff;
                               font-family: 'Raleway', Georgia, Times, serif;
                               font-weight: 400;
                               font-size: 12px;
                               text-align: center;
                               line-height: 1.5;
-                            "
-                          >
+                            ">
 
-                            <br />
-                            בואו לומר שלום
-                            <a
-                              href="https://bit.ly/3HpeunL"
-                              style="color: #f1af00; text-decoration: none"
-                            >
-                              בלינקדאין</a>
-                            <br />
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            align="left"
-                            class="rale"
-                            direction="rtl"
-                            style="
+                          <br />
+                          בואו לומר שלום
+                          <a href="https://bit.ly/3HpeunL" style="color: #f1af00; text-decoration: none">
+                            בלינקדאין</a>
+                          <br />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="left" class="rale" direction="rtl" style="
                               color: #ffffff;
                               font-family: 'Raleway', Georgia, Times, serif;
                               font-weight: 400;
                               font-size: 12px;
                               text-align: center;
                               line-height: 1.5;
-                            "
-                          >
-                            <br />
+                            ">
+                          <br />
 
-                            <p>
-                              המייל הזה נשלח אליך מכיוון שהיינו בקשר&nbsp;בשנים
-                              האחרונות אונליין או אופליין. אם את/ה לא מעוניין/ת
-                              לקבל עוד מיילים אפשר להסיר את עצמיך מהרשימות
-                              <a
-                                href="{{unsubscribe_url}}"
-                                style="color: #f1af00; text-decoration: none"
-                              >כאן</a>
-                            </p>
-                            <br />
+                          <p>
+                            המייל הזה נשלח אליך מכיוון שהיינו בקשר&nbsp;בשנים
+                            האחרונות אונליין או אופליין. אם את/ה לא מעוניין/ת
+                            לקבל עוד מיילים אפשר להסיר את עצמיך מהרשימות
+                            <a href="{{unsubscribe_url}}" style="color: #f1af00; text-decoration: none">כאן</a>
+                          </p>
+                          <br />
 
-                            <p><em>(אני אעלב כמובן אבל זאת זכותך המלאה)</em></p>
-                            {{message_content}}
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td
-                    height="30"
-                    style="font-size: 1px; line-height: 1px"
-                    width="100%"
-                  >
-                    &nbsp;
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+                          <p><em>(אני אעלב כמובן אבל זאת זכותך המלאה)</em></p>
+                          {{message_content}}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height="30" style="font-size: 1px; line-height: 1px" width="100%">
+                  &nbsp;
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
 </html>
