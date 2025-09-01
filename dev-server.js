@@ -4,6 +4,7 @@ const handlebars = require("handlebars");
 const fs = require("fs");
 const path = require("path");
 const liveServer = require("live-server");
+const glob = require("glob");
 
 // Function to compile newsletter
 const compileNewsletter = () => {
@@ -19,7 +20,7 @@ const compileNewsletter = () => {
 
     const template = handlebars.compile(templateSource);
     const htmlOutput = template(data);
-    
+
     fs.writeFileSync(`./${newsletterFolder}/output.html`, htmlOutput, "utf8");
     console.log(`✅ Newsletter compiled successfully to ${newsletterFolder}/output.html`);
   } catch (error) {
@@ -30,20 +31,14 @@ const compileNewsletter = () => {
 // Initial compilation
 compileNewsletter();
 
-// Watch for changes in article files
-const articleFiles = [
-  `./${newsletterFolder}/intro.html`,
-  `./${newsletterFolder}/article-1.html`,
-  `./${newsletterFolder}/article-2.html`,
-  `./${newsletterFolder}/article-3.html`,
-  `./${newsletterFolder}/article-4.html`,
-  `./template-2.hbs`,
-  `./${newsletterFolder}/data.js`
-];
+// Dynamically find all .js and .html files excluding node_modules
+const watchedFiles = glob.sync("**/*.{js,html,hbs}", {
+  ignore: "**/node_modules/**"
+});
 
 console.log("🔍 Watching for changes in newsletter files...");
 
-articleFiles.forEach(file => {
+watchedFiles.forEach(file => {
   fs.watchFile(file, (curr, prev) => {
     if (curr.mtime > prev.mtime) {
       console.log(`📝 ${file} changed, recompiling...`);
