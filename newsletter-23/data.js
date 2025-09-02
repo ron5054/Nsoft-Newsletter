@@ -23,7 +23,7 @@ function buildJson(directoryName) {
 
   return {
     intro: {
-      title: "AI Agents - מהמעבדה לשטח",
+      title: "לונג טיים נו סי",
       content: introContent,
     },
     articles: [

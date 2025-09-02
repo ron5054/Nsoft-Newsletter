@@ -33,7 +33,7 @@ compileNewsletter();
 
 // Dynamically find all .js and .html files excluding node_modules
 const watchedFiles = glob.sync("**/*.{js,html,hbs}", {
-  ignore: "**/node_modules/**"
+  ignore: ["**/node_modules/**", "**/output.html"]
 });
 
 console.log("🔍 Watching for changes in newsletter files...");
