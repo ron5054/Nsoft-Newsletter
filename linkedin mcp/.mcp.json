@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "linkedin-extractor": {
+      "command": "C:\\Python313\\python.exe",
+      "args": ["mcp_stdio_server.py"],
+      "env": {
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}

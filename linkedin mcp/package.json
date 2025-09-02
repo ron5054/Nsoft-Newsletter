@@ -1,0 +1,36 @@
+{
+  "name": "@yaron/linkedin-post-extractor-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for extracting text content from LinkedIn posts",
+  "main": "mcp_stdio_server.py",
+  "bin": {
+    "linkedin-mcp": "./mcp_stdio_server.py"
+  },
+  "scripts": {
+    "start": "python mcp_stdio_server.py",
+    "test": "python test_server.py"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "linkedin",
+    "text-extraction",
+    "claude"
+  ],
+  "author": "Yaron",
+  "license": "MIT",
+  "engines": {
+    "python": ">=3.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "local"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "*.py",
+    "requirements.txt",
+    "README.md"
+  ]
+}

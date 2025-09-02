@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "linkedin-extractor": {
+      "command": "python",
+      "args": [
+        "C:/Users/Yaron/Desktop/Nsoft/linkedin mcp/mcp_stdio_server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "C:/Users/Yaron/Desktop/Nsoft/linkedin mcp"
+      }
+    }
+  }
+}

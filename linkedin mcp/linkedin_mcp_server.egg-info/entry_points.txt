@@ -1,0 +1,3 @@
+[console_scripts]
+linkedin-extract = cli:main
+linkedin-mcp-server = mcp_stdio_server:main

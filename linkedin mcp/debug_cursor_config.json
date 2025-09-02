@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "linkedin-extractor-debug": {
+      "command": "C:\\Python313\\python.exe",
+      "args": ["C:\\Users\\Yaron\\Desktop\\Nsoft\\linkedin mcp\\debug_mcp_server.py"],
+      "env": {
+        "PYTHONPATH": "C:\\Users\\Yaron\\Desktop\\Nsoft\\linkedin mcp",
+        "PYTHONIOENCODING": "utf-8"
+      }
+    }
+  }
+}
