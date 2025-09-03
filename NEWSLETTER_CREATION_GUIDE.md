@@ -1,61 +1,128 @@
-# מדריך יצירת ניוזלטר חדש
+# Newsletter Creation Guide
 
-## סקירה כללית
-יצירת ניוזלטר חדש עם 4 מאמרים ותוכן עברי, בעקבות אותו מבנה כמו newsletter-23.
+## Overview
+Create a new newsletter with 4 articles and Hebrew content, following the same structure as newsletter-23.
 
-## תהליך אוטומטי עם LinkedIn MCP
+## Automated Process with LinkedIn MCP - Expected Workflow
 
-### שימוש ב-Claude Code עם LinkedIn MCP
-כאשר משתמש מספק 4 לינקים ללינקדאין, Claude Code יבצע את התהליך הבא:
+### Expected User Workflow
+When a user requests a new newsletter, Claude Code should perform the following process **automatically**:
 
-1. **חילוץ תוכן מלינקדאין**: שימוש ב-LinkedIn MCP לחילוץ טקסט, תמונות ולינקי YouTube
-2. **יצירת תמציות**: המרת התוכן המחולץ ל-4 מאמרים בעברית
-3. **יצירת מבנה הניוزלטר**: בניית כל הקבצים הנדרשים אוטומטית
-4. **עדכון index.html**: הוספת הניוזלטר החדש לרשימת `availableNewsletters`
-5. **קומפילציה והצגה**: הפעלת הסביבה עם live reload
+1. **Request 4 LinkedIn post URLs** from the user
+2. **Detect the next newsletter number** (check the highest existing number and increment by 1)
+3. **Extract content using MCP** from all 4 links
+4. **Summarize each post** into a short Hebrew article (3-4 paragraphs)
+5. **Create compelling intro** summarizing newsletter topics
+6. **Build complete newsletter structure** with all required files
+7. **Update index.html** with the new newsletter
+8. **Launch npm run dev** for preview
 
-### דוגמה לשימוש
+### Using Claude Code with LinkedIn MCP
+
+#### Example Usage
 ```
-משתמש: "צור ניוזלטר חדש עם 4 הלינקים הבאים:
+User: "Create a new newsletter with these 4 links:
 1. https://www.linkedin.com/posts/...
 2. https://www.linkedin.com/posts/...
 3. https://www.linkedin.com/posts/...
 4. https://www.linkedin.com/posts/..."
 ```
 
-Claude Code יבצע:
-- חילוץ תוכן מכל הלינקים
-- יצירת newsletter-XX חדש
-- כתיבת כל הקבצים (intro.html, article-1.html, etc.)
-- **יצירת data.js** עם הנתונים המחולצים (כותרות, תמונות, URLs)
-- **חשוב: אם נמצא לינק YouTube בפוסט, השתמש בו במקום לינק הלינקדאין**
-- **קריאת תוכן הניוזלטר** לחילוץ כותרת ותיאור מדויקים
-- עדכון index.html והוספת הניוזלטר החדש לרשימת `availableNewsletters`
-- הפעלת `npm run dev` לתצוגה
+#### MCP Field Mapping to Newsletter Data - **CRITICAL TO READ!**
 
-## תהליך ידני שלב אחר שלב
+**⚠️ Common Error: Using the Wrong Link!**
 
-### 1. יצירת מבנה תיקיות
+When MCP returns data, use the correct fields:
+
+```json
+// MCP Response
+{
+  "url": "https://www.linkedin.com/posts/...",          // ❌ This is the LinkedIn post link
+  "text": "Post content in Hebrew...",
+  "link": "https://lnkd.in/shortlink",                  // ✅ This is the link to use!
+  "link_img": "https://media.linkedin.com/...",
+  "success": true
+}
+```
+
+**Correct Mapping to Newsletter Data:**
+- `MCP.text` → `article content` (after summarization)
+- `MCP.link` → `article.url` ✅ **This is the link to use!**
+- `MCP.link_img` → `article.img` (or default if null/improper)
+- **Never** `MCP.url` → `article.url` ❌
+
+**Default Image Handling:**
+- If `MCP.link_img` is `null` or contains improper images (LinkedIn profile/background), use rotating default images:
+  1. `https://www.21kschool.com/ua/wp-content/uploads/sites/6/2023/11/15-Facts-About-Coding-Every-Kid-Should-Know.png`
+  2. `https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/coding-vs-programming-2.jpg`
+  3. `https://www.milesweb.com/blog/wp-content/uploads/2023/10/learn-code-online-for-free.png`
+  4. `https://blog-cdn.codefinity.com/images/84cf0089-4483-4124-8388-a52baff28a6e_8fcdc9988f47418092f5013c41d6f358.png.png`
+- **Important**: Never repeat the same default image within a single newsletter (4 articles max)
+- MCP automatically filters out LinkedIn profile and background images
+- YouTube thumbnails are always preferred when available
+
+#### Claude Code Should Execute:
+- Extract content from all links using LinkedIn MCP
+- Create newsletter-XX (XX = next sequential number)
+- Write all files (intro.html, article-1.html through article-4.html)
+- **Create data.js with extracted data**
+- **Use `link` field from MCP, not `url` field** ⚠️
+- **Use rotating default images when MCP returns null/improper image** (never repeat within same newsletter)
+- Create compelling intro summarizing newsletter topics
+- Update index.html and add new newsletter to `availableNewsletters` list
+- Launch `npm run dev` for preview
+
+## Important Troubleshooting Points
+
+### MCP Error - Wrong Link (Most Common Problem!)
+- ✅ **Correct**: Use `MCP.link` for `article.url`
+- ❌ **Wrong**: Use `MCP.url` for `article.url` 
+- **Reason**: `MCP.url` is the LinkedIn post link, `MCP.link` is the actual article link
+
+### Default Image Implementation
+When `MCP.link_img` is `null`, use this rotation logic:
+
+```javascript
+const DEFAULT_IMAGES = [
+  "https://www.21kschool.com/ua/wp-content/uploads/sites/6/2023/11/15-Facts-About-Coding-Every-Kid-Should-Know.png",
+  "https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/coding-vs-programming-2.jpg", 
+  "https://www.milesweb.com/blog/wp-content/uploads/2023/10/learn-code-online-for-free.png",
+  "https://blog-cdn.codefinity.com/images/84cf0089-4483-4124-8388-a52baff28a6e_8fcdc9988f47418092f5013c41d6f358.png.png"
+];
+
+// For each article needing default image, use next unused image from array
+let usedDefaults = [];
+articles.forEach((article, index) => {
+  if (!article.img || article.img === null) {
+    article.img = DEFAULT_IMAGES[usedDefaults.length];
+    usedDefaults.push(usedDefaults.length);
+  }
+});
+```
+
+## Manual Step-by-Step Process
+
+### 1. Create Folder Structure
 ```bash
 mkdir -p packages/html-emails/newsletter/newsletter-XX
 ```
 
-### 2. יצירת קבצי תוכן
-צור את הקבצים הבאים בתיקיית newsletter-XX:
+### 2. Create Content Files
+Create these files in the newsletter-XX directory:
 
 #### intro.html
-- כתוב כותרת מבוא מרתקת (2-3 מילים מקסימום)
-- 2-3 פסקאות המסבירות את נושא הניוזלטר
-- שמור על תוכן תמציתי ומרתק
+- Write compelling intro title (2-3 words maximum)
+- 2-3 paragraphs explaining the newsletter topic
+- Keep content concise and engaging
 
-#### article-1.html עד article-4.html
-- כל מאמר צריך להיות 3-4 פסקאות
-- השתמש ב-`<div dir="rtl">` כעטיפה
-- כתוב בעברית עם פורמט RTL נכון
-- שמור על תוכן תמציתי אך אינפורמטיבי
+#### article-1.html through article-4.html
+- Each article should be 3-4 paragraphs
+- Use `<div dir="rtl">` as wrapper
+- Write in Hebrew with proper RTL format
+- Keep content concise but informative
 
-### 3. יצירת data.js
-**חשוב**: צור את קובץ `data.js` לפני הקומפילציה. השתמש ב-`newsletter-23/data.js` כדוגמה:
+### 3. Create data.js
+**Important**: Create the `data.js` file before compilation. Use `newsletter-23/data.js` as example:
 
 ```javascript
 const fs = require("fs");
@@ -69,33 +136,33 @@ function buildJson(directoryName) {
 
   return {
     intro: {
-      title: "כותרת המבוא שלך", // חלץ מ-intro.html
+      title: "Your Intro Title", // Extract from intro.html
       content: introContent,
     },
     articles: [
       {
-        title: "כותרת מאמר 1", // חלץ מ-HTML comments או תוכן
+        title: "Article 1 Title", // Extract from HTML comments or content
         content: article1Content,
-        img: "URL_תמונה_1", // תמונה מלינקדאין או YouTube
-        url: "URL_לינקדאין_1", // לינק לפוסט או YouTube
+        img: "IMAGE_URL_1 || DEFAULT_IMAGE_1", // YouTube > proper LinkedIn image > rotating default
+        url: "RESOLVED_LINK_1", // Use MCP.link, not MCP.url!
       },
       {
-        title: "כותרת מאמר 2", 
+        title: "Article 2 Title", 
         content: article2Content,
-        img: "URL_תמונה_2",
-        url: "URL_לינקדאין_2",
+        img: "IMAGE_URL_2",
+        url: "LINKEDIN_URL_2",
       },
       {
-        title: "כותרת מאמר 3",
+        title: "Article 3 Title",
         content: article3Content,
-        img: "URL_תמונה_3", 
-        url: "URL_לינקדאין_3",
+        img: "IMAGE_URL_3", 
+        url: "LINKEDIN_URL_3",
       },
       {
-        title: "כותרת מאמר 4",
+        title: "Article 4 Title",
         content: article4Content,
-        img: "URL_תמונה_4",
-        url: "URL_לינקדאין_4",
+        img: "IMAGE_URL_4",
+        url: "LINKEDIN_URL_4",
       },
     ],
     unsubscribe_url: "{{unsubscribe_url}}",
@@ -107,83 +174,83 @@ function buildJson(directoryName) {
 module.exports = buildJson;
 ```
 
-**הערה**: אם הניוזלטר משתמש ב-`utils/genericData` (כמו newsletter-24), השתמש בזה במקום הקוד למעלה.
+**Note**: If the newsletter uses `utils/genericData` (like newsletter-24), use that instead of the code above.
 
-### 4. עדכון סקריפט הפיתוח
-ערוך את `dev-server.js`:
+### 4. Update Development Script
+Edit `dev-server.js`:
 ```javascript
-const newsletterFolder = "newsletter-XX"; // שנה את השורה הזו
+const newsletterFolder = "newsletter-XX"; // Change this line
 ```
 
-### 5. עדכון index.html
-עדכן את `index.html` והוסף את הניוזלטר החדש לרשימת `availableNewsletters`:
+### 5. Update index.html
+Update `index.html` and add the new newsletter to the `availableNewsletters` list:
 
-**חשוב**: קרא את תוכן הניוזלטר כדי לחלץ כותרת ותיאור מדויקים:
+**Important**: Read the newsletter content to extract accurate title and description:
 
-1. **קרא את `intro.html`** - חלץ את הכותרת מ-`<h2>` ואת התיאור מהפסקאות
-2. **קרא את `article-1.html`** - בדוק את הכותרת ב-HTML comments (אם קיימים)
-3. **הוסף לרשימה** עם הנתונים הנכונים:
+1. **Read `intro.html`** - Extract title from `<h2>` and description from paragraphs
+2. **Read `article-1.html`** - Check title in HTML comments (if present)
+3. **Add to list** with correct data:
 
 ```javascript
 const availableNewsletters = [
     {
         folder: 'newsletter-23',
-        title: 'AI Agents - מהמעבדה לשטח',
-        description: 'השבוע אנחנו עוברים מהתיאוריה למעשה - איך AI Agents הופכים מכלי מעניין לכלי עבודה אמיתי'
+        title: 'AI Agents - From Lab to Field',
+        description: 'This week we move from theory to practice - how AI Agents become real work tools'
     },
     {
-        folder: 'newsletter-XX', // שנה ל-XX המתאים
-        title: 'כותרת הניוזלטר החדש', // חלץ מ-intro.html
-        description: 'תיאור קצר של הניוזלטר החדש' // חלץ מ-intro.html
+        folder: 'newsletter-XX', // Change to appropriate XX
+        title: 'New Newsletter Title', // Extract from intro.html
+        description: 'Brief description of new newsletter' // Extract from intro.html
     }
     // Add more newsletters here as they are created
 ];
 ```
 
-**דוגמה לחילוץ נתונים**:
-- **כותרת**: חלץ מ-`<h2>` ב-`intro.html`
-- **תיאור**: חלץ מהפסקה הראשונה ב-`intro.html` או צור תמצית מהתוכן
+**Example Data Extraction**:
+- **Title**: Extract from `<h2>` in `intro.html`
+- **Description**: Extract from first paragraph in `intro.html` or create summary from content
 
-### 6. הפעלת סביבת הפיתוח
-**חשוב**: וודא שיצרת את `data.js` לפני הפעלת הסקריפט!
+### 6. Launch Development Environment
+**Important**: Ensure you created `data.js` before running the script!
 
 ```bash
 npm run dev
 ```
 
-הסקריפט יבצע:
-- קומפילציה ראשונית של הניוזלטר
-- מעקב אחר שינויים בקבצים (auto-recompile)
-- הפעלת live server ב-http://localhost:8080/output.html
-- רענון אוטומטי של הדפדפן כשהקבצים משתנים
+The script will:
+- Initial compilation of the newsletter
+- Watch for file changes (auto-recompile)
+- Launch live server at http://localhost:8080/output.html
+- Auto-refresh browser when files change
 
-### 7. קומפילציה ידנית (אופציונלי)
-אם נדרש רק לקמפל ללא live server:
+### 7. Manual Compilation (Optional)
+If you only need to compile without live server:
 ```bash
 node compileNewsletter.js
 ```
 
-## הנחיות תוכן
+## Content Guidelines
 
-### מבנה מאמר
-- **כותרת**: 3-7 מילים, מרתקת
-- **תוכן**: 3-4 פסקאות, עברית RTL
-- **תמונה**: תמונה מלינקדאין או YouTube
-- **URL**: כתובת הפוסט בלינקדאין
+### Article Structure
+- **Title**: 3-7 words, engaging
+- **Content**: 3-4 paragraphs, Hebrew RTL
+- **Image**: LinkedIn or YouTube image
+- **URL**: LinkedIn post address
 
-### סגנון כתיבה
-- השתמש בעברית עם פורמט RTL נכון
-- שמור על פסקאות קצרות (2-3 משפטים)
-- צור תוכן מרתק ואינפורמטיבי
-- כלול תובנות טכניות כשמתאים
+### Writing Style
+- Use Hebrew with proper RTL format
+- Keep paragraphs short (2-3 sentences)
+- Create engaging and informative content
+- Include technical insights when appropriate
 
-### מידע נדרש לכל מאמר
-1. **כותרת** (עברית)
-2. **תוכן** (עברית, 3-4 פסקאות)
-3. **URL תמונה** (תמונה מלינקדאין או YouTube)
-4. **URL לינקדאין** (כתובת מלאה של הפוסט)
+### Required Information per Article
+1. **Title** (Hebrew)
+2. **Content** (Hebrew, 3-4 paragraphs)
+3. **Image URL** (LinkedIn or YouTube image)
+4. **LinkedIn URL** (full post address)
 
-## מבנה קבצים
+## File Structure
 ```
 newsletter-XX/
 ├── intro.html
@@ -192,31 +259,31 @@ newsletter-XX/
 ├── article-3.html
 ├── article-4.html
 ├── data.js
-└── output.html (נוצר אוטומטית)
+└── output.html (generated automatically)
 ```
 
-## הערות חשובות
-- תמיד השתמש ב-`<div dir="rtl">` לתוכן עברי
-- וודא שכל כתובות הלינקדאין מלאות ועובדות
-- **חובה**: צור את `data.js` לפני הקומפילציה
-- **חובה**: עדכן את `index.html` והוסף כל ניוזלטר חדש לרשימת `availableNewsletters`
-- **חובה**: קרא את תוכן הניוזלטר (intro.html) כדי לחלץ כותרת ותיאור מדויקים
-- השתמש ב-`npm run dev` לפיתוח עם live reload
-- הדפדפן יפתח אוטומטית ב-http://localhost:8080/output.html
-- שינויים בקבצים יגרמו לקומפילציה ורענון אוטומטי
-- שמור על תוכן תמציתי אך בעל ערך
-- שמור על פורמט עקבי בכל המאמרים
+## Important Notes
+- Always use `<div dir="rtl">` for Hebrew content
+- Ensure all LinkedIn addresses are complete and working
+- **Required**: Create `data.js` before compilation
+- **Required**: Update `index.html` and add each new newsletter to `availableNewsletters` list
+- **Required**: Read newsletter content (intro.html) to extract accurate title and description
+- Use `npm run dev` for development with live reload
+- Browser opens automatically at http://localhost:8080/output.html
+- File changes trigger automatic compilation and refresh
+- Keep content concise but valuable
+- Maintain consistent format across all articles
 
-## דוגמה למבנה תוכן
+## Content Structure Examples
 ### intro.html
 ```html
 <div dir="rtl">
-  <h2>כותרת המבוא</h2>
+  <h2>Intro Title</h2>
   <p>
-    פסקה ראשונה - הסבר על נושא הניוזלטר
+    First paragraph - explanation of newsletter topic
   </p>
   <p>
-    פסקה שנייה - מה הקוראים ילמדו
+    Second paragraph - what readers will learn
   </p>
 </div>
 ```
@@ -225,13 +292,13 @@ newsletter-XX/
 ```html
 <div dir="rtl">
   <p>
-    פסקה ראשונה - מבוא למאמר
+    First paragraph - article introduction
   </p>
   <p>
-    פסקה שנייה - תוכן עיקרי
+    Second paragraph - main content
   </p>
   <p>
-    פסקה שלישית - סיכום או נקודה חשובה
+    Third paragraph - summary or important point
   </p>
 </div>
 ```

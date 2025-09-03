@@ -422,18 +422,31 @@ class LinkedInExtractor:
             return None, None, None
 
     def _generate_link_img(self, link: Optional[str], post_image: Optional[str]) -> Optional[str]:
-        """Generate link_img based on the rules: YouTube thumbnail > post image > null."""
+        """Generate link_img based on the rules: YouTube thumbnail > proper post image > default images."""
         # Rule 1: If there's a YouTube link, generate thumbnail URL
         if link:
             video_id = self._extract_youtube_video_id(link)
             if video_id:
                 return self._generate_youtube_thumbnail_url(video_id)
         
-        # Rule 2: If no YouTube link but there's a post image, use that
+        # Rule 2: If no YouTube link but there's a post image, check if it's proper
         if post_image:
+            # Filter out LinkedIn profile/background images that aren't proper article images
+            improper_image_patterns = [
+                'profile-displaybackgroundimage',  # LinkedIn background images
+                'profile-displayphoto',           # LinkedIn profile photos
+                '/profile/',                      # General profile images
+                'headshot',                       # Profile headshots
+            ]
+            
+            # If it's an improper image type, treat as no image
+            if any(pattern in post_image for pattern in improper_image_patterns):
+                logger.debug(f"Filtering out improper image: {post_image}")
+                return None
+            
             return post_image
         
-        # Rule 3: If none of the above, return null
+        # Rule 3: If none of the above, return null (newsletter creation will handle default)
         return None
 
     async def extract_post_text(self, url: str) -> Dict[str, Any]:

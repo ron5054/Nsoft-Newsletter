@@ -11,9 +11,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   - Auto-recompiles newsletter on file changes
 
 - **Manual compilation**: `node compileNewsletter.js`
-  - Compiles current newsletter (newsletter-23) using Handlebars template
+  - Compiles hardcoded newsletter-23 using Handlebars template
   - Watches for changes in article files and recompiles automatically
   - Updates index.html with newsletter entries
+  - Note: compileNewsletter.js is hardcoded to newsletter-23, while dev-server.js auto-detects the latest newsletter folder
 
 ## Architecture
 
@@ -37,7 +38,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 1. HTML content files → `data.js` → Handlebars compilation → `output.html`
 2. Newsletter data includes intro, 4 articles with titles/content/images/URLs
 3. Template supports email-specific formatting with responsive design
-4. Index page auto-updates with new newsletters via JavaScript array
+4. Index page auto-updates with new newsletters via JavaScript array (compileNewsletter.js only)
+
+### Key Implementation Details
+- **Auto-detection**: dev-server.js automatically detects and compiles the latest newsletter folder
+- **File watching**: Both scripts watch for changes but with different scopes:
+  - compileNewsletter.js: watches specific article files in hardcoded newsletter-23
+  - dev-server.js: watches all .js, .html, .hbs files (excluding node_modules and output.html)
+- **Cache clearing**: dev-server.js clears require cache for data.js to ensure fresh compilation
 
 ### Email Template Features
 - RTL Hebrew language support
@@ -72,3 +80,47 @@ This project includes a LinkedIn Post Text Extractor MCP (Model Context Protocol
 - **Install browsers**: `playwright install chromium`
 - **Test extraction**: `python "linkedin mcp/cli.py" [LinkedIn URL]`
 - **Server location**: `linkedin mcp/mcp_stdio_server.py`
+
+## Newsletter Creation Workflow
+
+### Expected User Workflow
+When a user requests a new newsletter, Claude Code should automatically:
+
+1. **Request 4 LinkedIn post URLs** from the user
+2. **Auto-detect the next newsletter number** (check highest existing number and increment by 1)
+3. **Extract content using LinkedIn MCP** from all 4 links
+4. **Summarize each post** into a Hebrew article (3-4 paragraphs)
+5. **Create engaging intro** summarizing newsletter topics
+6. **Build complete newsletter structure** with all required files
+7. **Update index.html** with new newsletter entry
+8. **Launch npm run dev** for preview
+
+### Critical MCP Field Mapping
+**⚠️ Common Error: Using Wrong Link Field!**
+
+When MCP returns data, use the correct fields:
+```
+MCP Output → Newsletter Data:
+- MCP.text → article content (after summarization)
+- MCP.link → article.url ✅ (Use this, not MCP.url!)
+- MCP.link_img → article.img
+- MCP.url = LinkedIn post URL ❌ (Never use for article.url)
+```
+
+### Implementation Notes
+- **Always use `MCP.link` for article URLs**, never `MCP.url` (LinkedIn post URL)
+- **Use rotating default images when MCP returns null**: Never repeat same image within a newsletter
+- Auto-detect latest newsletter folder for sequential numbering
+- Create Hebrew RTL content with proper `<div dir="rtl">` wrapping
+- Generate compelling intro that connects all 4 article topics
+- Update `availableNewsletters` array in index.html with extracted title/description
+
+### Default Images Array
+```javascript
+const DEFAULT_IMAGES = [
+  "https://www.21kschool.com/ua/wp-content/uploads/sites/6/2023/11/15-Facts-About-Coding-Every-Kid-Should-Know.png",
+  "https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/coding-vs-programming-2.jpg", 
+  "https://www.milesweb.com/blog/wp-content/uploads/2023/10/learn-code-online-for-free.png",
+  "https://blog-cdn.codefinity.com/images/84cf0089-4483-4124-8388-a52baff28a6e_8fcdc9988f47418092f5013c41d6f358.png.png"
+];
+```
