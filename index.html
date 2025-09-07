@@ -226,29 +226,46 @@
                 return;
             }
 
-            container.innerHTML = newsletters.map(newsletter => `
+            container.innerHTML = newsletters.map(newsletter => {
+                const number = newsletter.folder.replace('newsletter-', '');
+                return `
                 <div class="newsletter-card" onclick="viewNewsletter('${newsletter.folder}')">
-                    <h3>${newsletter.title}</h3>
+                    <h3>ניוזלטר ${number} - ${newsletter.title}</h3>
                     <p>${newsletter.description}</p>
                     <span class="btn">צפה בניוזלטר</span>
                 </div>
-            `).join('');
+            `}).join('');
         }
 
         function viewNewsletter(folder) {
             document.getElementById('selection-view').classList.add('hidden');
             document.getElementById('viewer').classList.remove('hidden');
             document.getElementById('newsletter-frame').src = `${folder}/output.html`;
+            window.location.hash = folder;
         }
 
         function showSelection() {
             document.getElementById('viewer').classList.add('hidden');
             document.getElementById('selection-view').classList.remove('hidden');
             document.getElementById('newsletter-frame').src = '';
+            window.location.hash = '';
+        }
+
+        function handleHashChange() {
+            const hash = window.location.hash.substring(1);
+            if (hash && availableNewsletters.find(n => n.folder === hash)) {
+                viewNewsletter(hash);
+            } else if (!hash) {
+                showSelection();
+            }
         }
 
         // Load newsletters on page load
         loadNewsletters();
+        
+        // Handle initial hash and browser navigation
+        window.addEventListener('hashchange', handleHashChange);
+        handleHashChange();
     </script>
 </body>
 </html>
