@@ -51,9 +51,14 @@ When MCP returns data, use the correct fields:
 
 **Correct Mapping to Newsletter Data:**
 - `MCP.text` → `article content` (after summarization)
-- `MCP.link` → `article.url` ✅ **This is the link to use!**
+- `MCP.link` → `article.url` ✅ **BUT must resolve redirects to final URL!**
 - `MCP.link_img` → `article.img` (or default if null/improper)
 - **Never** `MCP.url` → `article.url` ❌
+
+**⚠️ CRITICAL: Always Resolve Redirect URLs to Final Destination**
+- If `MCP.link` contains `lnkd.in` or other redirect URLs, use WebFetch to get the final destination
+- Example: `https://lnkd.in/d_ATe_KB` → `https://x.com/akshay_pachaar/status/1954158220727263311`
+- Never use redirect URLs in the newsletter - always use the final destination
 
 **Default Image Handling:**
 - If `MCP.link_img` is `null` or contains improper images (LinkedIn profile/background), use rotating default images:
@@ -71,6 +76,7 @@ When MCP returns data, use the correct fields:
 - Write all files (intro.html, article-1.html through article-4.html)
 - **Create data.js with extracted data**
 - **Use `link` field from MCP, not `url` field** ⚠️
+- **CRITICAL: Resolve any redirect URLs (lnkd.in, etc.) to final destination using WebFetch** ⚠️
 - **Use rotating default images when MCP returns null/improper image** (never repeat within same newsletter)
 - Create compelling intro summarizing newsletter topics
 - Update index.html and add new newsletter to `availableNewsletters` list
@@ -79,9 +85,22 @@ When MCP returns data, use the correct fields:
 ## Important Troubleshooting Points
 
 ### MCP Error - Wrong Link (Most Common Problem!)
-- ✅ **Correct**: Use `MCP.link` for `article.url`
+- ✅ **Correct**: Use `MCP.link` for `article.url` BUT resolve redirects to final URL
 - ❌ **Wrong**: Use `MCP.url` for `article.url` 
-- **Reason**: `MCP.url` is the LinkedIn post link, `MCP.link` is the actual article link
+- ❌ **Wrong**: Use redirect URLs like `lnkd.in` directly
+- **Reason**: `MCP.url` is the LinkedIn post link, `MCP.link` is the actual article link, but must be resolved to final destination
+
+### Redirect Resolution Process
+1. Get `MCP.link` from extraction
+2. If it contains `lnkd.in`, `bit.ly`, or other redirect domains:
+   ```javascript
+   // Use WebFetch to resolve redirect
+   const finalUrl = await WebFetch(MCP.link, "What is the final destination URL?");
+   article.url = finalUrl; // Use the final destination
+   ```
+3. Examples of correct resolution:
+   - `https://lnkd.in/d_ATe_KB` → `https://x.com/akshay_pachaar/status/1954158220727263311`
+   - `https://lnkd.in/eTBnzM_h` → `https://tkdodo.eu/blog/deriving-client-state-from-server-state`
 
 ### Default Image Implementation
 When `MCP.link_img` is `null`, use this rotation logic:
@@ -122,8 +141,10 @@ Create these files in the newsletter-XX directory:
 #### article-1.html through article-4.html
 - Each article should be 3-4 paragraphs
 - Use `<div dir="rtl">` as wrapper
+- **IMPORTANT**: Do NOT include `<h3>` titles in article files - titles come from data.js only
 - Write in Hebrew with proper RTL format
 - Keep content concise but informative
+- Start directly with `<p>` tags inside the `<div dir="rtl">` wrapper
 
 ### 3. Create data.js
 **Important**: Create the `data.js` file before compilation. Use `newsletter-23/data.js` as example:
@@ -293,10 +314,12 @@ newsletter-XX/
 ```
 
 ### article-X.html
+**IMPORTANT**: Do NOT include `<h3>` headings - titles come from data.js only!
+
 ```html
 <div dir="rtl">
   <p>
-    First paragraph - article introduction
+    First paragraph - article introduction (start directly with content)
   </p>
   <p>
     Second paragraph - main content
