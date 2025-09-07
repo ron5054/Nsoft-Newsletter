@@ -9,13 +9,17 @@ Create a new newsletter with 4 articles and Hebrew content, following the same s
 When a user requests a new newsletter, Claude Code should perform the following process **automatically**:
 
 1. **Request 4 LinkedIn post URLs** from the user
-2. **Detect the next newsletter number** (check the highest existing number and increment by 1)
-3. **Extract content using MCP** from all 4 links
-4. **Summarize each post** into a short Hebrew article (3-4 paragraphs)
-5. **Create compelling intro** summarizing newsletter topics
-6. **Build complete newsletter structure** with all required files
-7. **Update index.html** with the new newsletter
-8. **Launch npm run dev** for preview
+2. **Check for duplicate URLs** - Read `linkedin_urls_registry.json` and compare user URLs against all previous newsletters
+   - If any URL was used before → **STOP** and tell user which newsletter used it
+   - If all URLs are unique → Continue with creation
+3. **Detect the next newsletter number** (check the highest existing number and increment by 1)
+4. **Extract content using MCP** from all 4 links
+5. **Summarize each post** into a short Hebrew article (3-4 paragraphs)
+6. **Create compelling intro** summarizing newsletter topics
+7. **Build complete newsletter structure** with all required files
+8. **Update linkedin_urls_registry.json** with the new newsletter URLs
+9. **Update index.html** with the new newsletter
+10. **Launch npm run dev** for preview
 
 ### Using Claude Code with LinkedIn MCP
 

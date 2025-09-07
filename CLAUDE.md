@@ -83,6 +83,8 @@ This project includes a LinkedIn Post Text Extractor MCP (Model Context Protocol
 
 ## Newsletter Creation Workflow
 
+**IMPORTANT**: Before creating any newsletter, always read the comprehensive guide at `NEWSLETTER_CREATION_GUIDE.md` for detailed instructions and troubleshooting.
+
 ### Expected User Workflow
 When a user requests a new newsletter, Claude Code should automatically:
 
