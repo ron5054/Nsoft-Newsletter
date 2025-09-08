@@ -28,10 +28,10 @@ function buildJson(directoryName) {
     },
     articles: [
       {
-        title: "המעבר ל-AI Engineering: דרך מעשית להצלחה בעולם הבינה המלאכותית",
+        title: "למה Claude Code איטי בכוונה? Serena MCP פותר את הבעיה וחוסך לכם זמן",
         content: article1Content,
-        img: "https://www.21kschool.com/ua/wp-content/uploads/sites/6/2023/11/15-Facts-About-Coding-Every-Kid-Should-Know.png",
-        url: "https://x.com/akshay_pachaar/status/1954158220727263311",
+        img: "https://img.youtube.com/vi/wYWyJNs1HVk/maxresdefault.jpg",
+        url: "https://www.youtube.com/watch?v=wYWyJNs1HVk",
       },
       {
         title: "למה לנהל State במקום לגזור אותו? עקרון מהפכני בפיתוח React",
