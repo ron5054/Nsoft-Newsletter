@@ -23,7 +23,7 @@ function buildJson(directoryName) {
 
   return {
     intro: {
-      title: "הפיתוח החכם: כשהטכנולוגיה פוגשת אסטרטגיה",
+      title: "מהפכת ה-AI בפיתוח: כלים, טכניקות ותובנות מעשיות",
       content: introContent,
     },
     articles: [
@@ -34,10 +34,10 @@ function buildJson(directoryName) {
         url: "https://www.youtube.com/watch?v=wYWyJNs1HVk",
       },
       {
-        title: "למה לנהל State במקום לגזור אותו? עקרון מהפכני בפיתוח React",
+        title: "איך Claude Code בונה Lovable ב-75 דקות? הדגמה מרתקת של AI בפעולה",
         content: article2Content,
-        img: "https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/coding-vs-programming-2.jpg",
-        url: "https://tkdodo.eu/blog/deriving-client-state-from-server-state",
+        img: "https://img.youtube.com/vi/_GMtx9EsIKU/maxresdefault.jpg",
+        url: "https://www.youtube.com/watch?v=_GMtx9EsIKU",
       },
       {
         title: "Vibe Coding בפרודקשן: איך Anthropic דחפו 22,000 שורות קוד של Claude לפרודקשן",
@@ -46,10 +46,10 @@ function buildJson(directoryName) {
         url: "https://www.youtube.com/watch?v=fHWFF_pnqDk",
       },
       {
-        title: "TanStack DB: המהפכה הבאה בניהול State לאפליקציות ווב",
+        title: "400 שעות ב-Cursor: הלקחים המתקדמים של עבודה עם AI IDE",
         content: article4Content,
-        img: "https://img.youtube.com/vi/bfOmM1FKsaQ/maxresdefault.jpg",
-        url: "https://www.youtube.com/watch?v=bfOmM1FKsaQ",
+        img: "https://img.youtube.com/vi/gYLNxUxVomY/maxresdefault.jpg",
+        url: "https://www.youtube.com/watch?v=gYLNxUxVomY",
       },
     ],
     unsubscribe_url: "{{unsubscribe_url}}",

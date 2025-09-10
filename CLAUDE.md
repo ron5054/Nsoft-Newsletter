@@ -116,6 +116,7 @@ MCP Output → Newsletter Data:
 - Create Hebrew RTL content with proper `<div dir="rtl">` wrapping
 - Generate compelling intro that connects all 4 article topics
 - Update `availableNewsletters` array in index.html with extracted title/description
+- **IMPORTANT**: When editing existing newsletter articles with new LinkedIn URLs, always update `linkedin_urls_registry.json` to reflect the changes
 
 ### Default Images Array
 ```javascript

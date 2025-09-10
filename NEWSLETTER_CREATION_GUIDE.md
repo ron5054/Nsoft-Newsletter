@@ -293,6 +293,7 @@ newsletter-XX/
 - **Required**: Create `data.js` before compilation
 - **Required**: Update `index.html` and add each new newsletter to `availableNewsletters` list
 - **Required**: Read newsletter content (intro.html) to extract accurate title and description
+- **CRITICAL**: When editing existing newsletter articles with new LinkedIn URLs, always update `linkedin_urls_registry.json` to reflect the changes
 - Use `npm run dev` for development with live reload
 - Browser opens automatically at http://localhost:8080/output.html
 - File changes trigger automatic compilation and refresh
