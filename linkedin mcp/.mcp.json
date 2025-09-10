@@ -1,9 +1,14 @@
 {
   "mcpServers": {
     "linkedin-extractor": {
-      "command": "C:\\Python313\\python.exe",
-      "args": ["mcp_stdio_server.py"],
+      "type": "stdio",
+      "command": "/usr/bin/env",
+      "args": [
+        "python3",
+        "/Users/nadav/src/nSoft/Nsoft-Newsletter/linkedin_mcp/mcp_stdio_server.py"
+      ],
       "env": {
+        "PYTHONPATH": "/Users/nadav/src/nSoft/Nsoft-Newsletter/linkedin_mcp",
         "PYTHONIOENCODING": "utf-8"
       }
     }

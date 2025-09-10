@@ -181,3 +181,12 @@ Thumbs.db
 newsletter-*/output.html
 *.tmp
 *.temp
+.history
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
