@@ -3,6 +3,57 @@
 ## Overview
 Create a new newsletter with 4 articles and Hebrew content, following the same structure as newsletter-23.
 
+## 🚨 CRITICAL: data.js Structure (READ FIRST!)
+
+**Most Common Error: Wrong data.js Structure Causing Compilation Failure**
+
+The dev-server expects this EXACT pattern in data.js:
+
+```javascript
+const fs = require('fs');
+
+function buildJson(directoryName) {
+    const introContent = fs.readFileSync(`./${directoryName}/intro.html`, 'utf8');
+    const article1Content = fs.readFileSync(`./${directoryName}/article-1.html`, 'utf8');
+    const article2Content = fs.readFileSync(`./${directoryName}/article-2.html`, 'utf8');
+    const article3Content = fs.readFileSync(`./${directoryName}/article-3.html`, 'utf8');
+    const article4Content = fs.readFileSync(`./${directoryName}/article-4.html`, 'utf8');
+
+    return {
+        intro: {
+            title: "Newsletter Title",
+            content: introContent,
+        },
+        articles: [
+            {
+                title: "Article 1 Title",
+                content: article1Content,
+                img: "IMAGE_URL",
+                url: "ARTICLE_URL"
+            },
+            // ... more articles
+        ],
+        unsubscribe_url: "{{unsubscribe_url}}",
+        message_content: "{{message_content}}",
+        subscriber: { first_name: "{{subscriber.first_name}}" }
+    };
+}
+
+module.exports = buildJson; // MUST export this function
+```
+
+**⚠️ WRONG patterns that WILL cause compilation failure:**
+- ❌ `function buildNewsletterData()` (wrong function name)
+- ❌ Using `__dirname` instead of `directoryName` parameter
+- ❌ `module.exports = buildNewsletterData` (wrong export)
+- ❌ Not taking `directoryName` parameter
+
+**✅ Compilation Verification Steps:**
+1. Create data.js with correct structure FIRST
+2. Create intro.html
+3. **IMMEDIATELY check output.html** - intro content should appear
+4. If intro missing → data.js structure is wrong
+
 ## Automated Process with LinkedIn MCP - Expected Workflow
 
 ### Expected User Workflow
@@ -14,12 +65,16 @@ When a user requests a new newsletter, Claude Code should perform the following 
    - If all URLs are unique → Continue with creation
 3. **Detect the next newsletter number** (check the highest existing number and increment by 1)
 4. **Extract content using MCP** from all 4 links
-5. **Summarize each post** into a short Hebrew article (3-4 paragraphs)
-6. **Create compelling intro** summarizing newsletter topics
-7. **Build complete newsletter structure** with all required files
-8. **Update linkedin_urls_registry.json** with the new newsletter URLs
-9. **Update index.html** with the new newsletter
-10. **Launch npm run dev** for preview
+5. **🚨 CRITICAL: Resolve ALL redirect URLs to final destinations** - Use WebFetch to resolve any `lnkd.in`, `bit.ly` or redirect URLs
+6. **Create newsletter folder** (e.g., newsletter-25)
+7. **🚨 CRITICAL: Create data.js with correct structure FIRST** - Must use `function buildJson(directoryName)` pattern
+8. **Create compelling intro** summarizing newsletter topics (intro.html)
+9. **✅ VERIFY: Check intro compilation immediately** - Intro content must appear in output.html
+10. **Summarize each post** into short Hebrew articles (article-1.html through article-4.html)
+11. **🔍 VERIFY: Check all article URLs are final destinations (NOT redirect links)**
+12. **Update linkedin_urls_registry.json** with the new newsletter URLs
+13. **Update index.html** with the new newsletter
+14. **Launch npm run dev** for preview
 
 ### Using Claude Code with LinkedIn MCP
 
@@ -55,9 +110,26 @@ When MCP returns data, use the correct fields:
 - `MCP.link_img` → `article.img` (or default if null/improper)
 - **Never** `MCP.url` → `article.url` ❌
 
-**⚠️ CRITICAL: Always Resolve Redirect URLs to Final Destination**
-- If `MCP.link` contains `lnkd.in` or other redirect URLs, use WebFetch to get the final destination
-- Example: `https://lnkd.in/d_ATe_KB` → `https://x.com/akshay_pachaar/status/1954158220727263311`
+**🚨 CRITICAL: Always Resolve Redirect URLs to Final Destination (SECOND MOST COMMON ERROR!)**
+
+**THE PROBLEM:** Using redirect URLs like `lnkd.in` directly in newsletter instead of final destinations
+
+**THE SOLUTION:**
+```javascript
+// WRONG: Using redirect URL directly  
+const badUrl = "https://lnkd.in/dYMXUjwW"; 
+article.url = badUrl; // ❌ DON'T DO THIS!
+
+// CORRECT: Resolve redirect to final destination
+const finalUrl = await WebFetch("https://lnkd.in/dYMXUjwW", "What is the final destination URL?");
+article.url = finalUrl; // ✅ Use final destination
+// Result: "https://tkdodo.eu/blog/react-query-selectors-supercharged"
+```
+
+**Examples of correct resolution:**
+- `https://lnkd.in/dYMXUjwW` → `https://tkdodo.eu/blog/react-query-selectors-supercharged`
+- `https://lnkd.in/eTBnzM_h` → `https://tkdodo.eu/blog/deriving-client-state-from-server-state` 
+- `https://lnkd.in/dYzrk_rJ` → `https://tkdodo.eu/blog/the-useless-use-callback`
 - Never use redirect URLs in the newsletter - always use the final destination
 
 **Default Image Handling:**
@@ -72,11 +144,13 @@ When MCP returns data, use the correct fields:
 
 #### Claude Code Should Execute:
 - Extract content from all links using LinkedIn MCP
-- Create newsletter-XX (XX = next sequential number)
+- **🚨 CRITICAL: Resolve ALL redirect URLs to final destinations using WebFetch** ⚠️
+- Create newsletter-XX (XX = next sequential number)  
+- **🚨 CRITICAL: Create data.js with correct `buildJson(directoryName)` structure FIRST**
+- **✅ VERIFY: Test compilation immediately after creating intro.html**
 - Write all files (intro.html, article-1.html through article-4.html)
-- **Create data.js with extracted data**
 - **Use `link` field from MCP, not `url` field** ⚠️
-- **CRITICAL: Resolve any redirect URLs (lnkd.in, etc.) to final destination using WebFetch** ⚠️
+- **🔍 VERIFY: All article URLs must be final destinations (not lnkd.in redirects)**
 - **Use rotating default images when MCP returns null/improper image** (never repeat within same newsletter)
 - Create compelling intro summarizing newsletter topics
 - Update index.html and add new newsletter to `availableNewsletters` list
@@ -84,7 +158,31 @@ When MCP returns data, use the correct fields:
 
 ## Important Troubleshooting Points
 
-### MCP Error - Wrong Link (Most Common Problem!)
+### data.js Compilation Error (MOST COMMON!)
+**Problem**: Intro content doesn't appear in output.html
+**Root Cause**: Wrong data.js structure
+
+**Solution:**
+1. Check data.js exports `function buildJson(directoryName)` (not `buildNewsletterData`)
+2. Function must take `directoryName` parameter and use it: `./${directoryName}/intro.html`
+3. Function must be exported: `module.exports = buildJson`
+4. After fixing, file watching will trigger automatic recompilation
+
+### Redirect URL Error (SECOND MOST COMMON!)
+**Problem**: Article URLs are redirect links (lnkd.in) instead of final destinations
+**Root Cause**: Using `MCP.link` directly without resolving redirects
+
+**Solution:**
+```javascript
+// WRONG: Using redirect URL directly
+article.url = "https://lnkd.in/dYMXUjwW"; // ❌ DON'T DO THIS!
+
+// CORRECT: Resolve redirect to final destination  
+const finalUrl = await WebFetch("https://lnkd.in/dYMXUjwW", "What is the final destination URL?");
+article.url = finalUrl; // ✅ "https://tkdodo.eu/blog/react-query-selectors-supercharged"
+```
+
+### MCP Error - Wrong Field (Third Most Common Problem!)
 - ✅ **Correct**: Use `MCP.link` for `article.url` BUT resolve redirects to final URL
 - ❌ **Wrong**: Use `MCP.url` for `article.url` 
 - ❌ **Wrong**: Use redirect URLs like `lnkd.in` directly
@@ -98,9 +196,10 @@ When MCP returns data, use the correct fields:
    const finalUrl = await WebFetch(MCP.link, "What is the final destination URL?");
    article.url = finalUrl; // Use the final destination
    ```
-3. Examples of correct resolution:
-   - `https://lnkd.in/d_ATe_KB` → `https://x.com/akshay_pachaar/status/1954158220727263311`
+3. Examples of correct resolution (from Newsletter 25):
+   - `https://lnkd.in/dYMXUjwW` → `https://tkdodo.eu/blog/react-query-selectors-supercharged`
    - `https://lnkd.in/eTBnzM_h` → `https://tkdodo.eu/blog/deriving-client-state-from-server-state`
+   - `https://lnkd.in/dYzrk_rJ` → `https://tkdodo.eu/blog/the-useless-use-callback`
 
 ### Default Image Implementation
 When `MCP.link_img` is `null`, use this rotation logic:

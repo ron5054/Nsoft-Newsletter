@@ -91,32 +91,95 @@ When a user requests a new newsletter, Claude Code should automatically:
 1. **Request 4 LinkedIn post URLs** from the user
 2. **Auto-detect the next newsletter number** (check highest existing number and increment by 1)
 3. **Extract content using LinkedIn MCP** from all 4 links
-4. **Summarize each post** into a Hebrew article (3-4 paragraphs)
-5. **Create engaging intro** summarizing newsletter topics
-6. **Build complete newsletter structure** with all required files
-7. **Update index.html** with new newsletter entry
-8. **Launch npm run dev** for preview
+4. **🚨 CRITICAL: Resolve ALL redirect URLs to final destinations** - Use WebFetch to resolve any `lnkd.in` or redirect URLs
+5. **Create newsletter folder** (e.g., newsletter-25)
+6. **CRITICAL: Create data.js with correct structure FIRST** - This must match the expected pattern: `function buildJson(directoryName)` that exports this function
+7. **Create engaging intro** summarizing newsletter topics (intro.html)
+8. **Verify intro compilation** - Check that intro content appears in output.html immediately after creating intro.html
+9. **Summarize each post** into Hebrew articles (article-1.html through article-4.html)
+10. **✅ VERIFY: Check all article URLs are final destinations (NOT redirect links)**
+11. **Update linkedin_urls_registry.json** with new newsletter URLs  
+12. **Update index.html** with new newsletter entry
+13. **Launch npm run dev** for preview
 
 ### Critical MCP Field Mapping
-**⚠️ Common Error: Using Wrong Link Field!**
+**⚠️ Second Most Common Error: Using Redirect URLs Without Resolution!**
 
-When MCP returns data, use the correct fields:
+When MCP returns data, use the correct fields AND resolve redirects:
 ```
 MCP Output → Newsletter Data:
 - MCP.text → article content (after summarization)
-- MCP.link → article.url ✅ (Use this, not MCP.url!)
+- MCP.link → ⚠️ MUST RESOLVE REDIRECTS → article.url
 - MCP.link_img → article.img
 - MCP.url = LinkedIn post URL ❌ (Never use for article.url)
 ```
 
+**🚨 CRITICAL URL Resolution Process:**
+```javascript
+// Example: MCP returns lnkd.in redirect URL
+const mcpLink = "https://lnkd.in/dYMXUjwW";
+
+// WRONG: Using redirect URL directly
+article.url = mcpLink; // ❌ DON'T DO THIS!
+
+// CORRECT: Resolve redirect to final destination
+const finalUrl = await WebFetch(mcpLink, "What is the final destination URL?");
+article.url = finalUrl; // ✅ Use final destination
+// Result: "https://tkdodo.eu/blog/react-query-selectors-supercharged"
+```
+
+### Critical data.js Structure (MUST READ!)
+**⚠️ Most Common Compilation Error: Wrong data.js Structure**
+
+The dev-server expects this EXACT structure in data.js:
+
+```javascript
+const fs = require('fs');
+
+function buildJson(directoryName) {
+    const introContent = fs.readFileSync(`./${directoryName}/intro.html`, 'utf8');
+    const article1Content = fs.readFileSync(`./${directoryName}/article-1.html`, 'utf8');
+    // ... more articles
+
+    return {
+        intro: {
+            title: "Newsletter Title",
+            content: introContent,
+        },
+        articles: [
+            // articles array
+        ],
+        unsubscribe_url: "{{unsubscribe_url}}",
+        message_content: "{{message_content}}",
+        subscriber: { first_name: "{{subscriber.first_name}}" }
+    };
+}
+
+module.exports = buildJson; // Must export the function
+```
+
+**WRONG patterns that will cause compilation failure:**
+- ❌ `module.exports = buildNewsletterData` (wrong function name)
+- ❌ Using `__dirname` instead of `directoryName` parameter
+- ❌ Not exporting a function that takes directoryName parameter
+
 ### Implementation Notes
+- **🚨 CRITICAL: ALWAYS resolve redirect URLs to final destinations** - Use WebFetch for any `lnkd.in`, `bit.ly`, etc.
 - **Always use `MCP.link` for article URLs**, never `MCP.url` (LinkedIn post URL)
-- **Use rotating default images when MCP returns null**: Never repeat same image within a newsletter
+- **CRITICAL: Create data.js with correct structure BEFORE creating content files**
+- **Verify intro compilation immediately** after creating intro.html - intro should appear in output.html
+- **✅ VERIFY: All article URLs must be final destinations, NOT redirect links**
+- Use rotating default images when MCP returns null: Never repeat same image within a newsletter
 - Auto-detect latest newsletter folder for sequential numbering
 - Create Hebrew RTL content with proper `<div dir="rtl">` wrapping
 - Generate compelling intro that connects all 4 article topics
 - Update `availableNewsletters` array in index.html with extracted title/description
 - **IMPORTANT**: When editing existing newsletter articles with new LinkedIn URLs, always update `linkedin_urls_registry.json` to reflect the changes
+
+**Common URL Resolution Examples:**
+- `https://lnkd.in/dYMXUjwW` → `https://tkdodo.eu/blog/react-query-selectors-supercharged`
+- `https://lnkd.in/eTBnzM_h` → `https://tkdodo.eu/blog/deriving-client-state-from-server-state`
+- `https://lnkd.in/dYzrk_rJ` → `https://tkdodo.eu/blog/the-useless-use-callback`
 
 ### Default Images Array
 ```javascript
