@@ -178,7 +178,6 @@ ehthumbs.db
 Thumbs.db
 
 # Project specific
-newsletter-*/output.html
 *.tmp
 *.temp
 .history

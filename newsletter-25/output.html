@@ -360,7 +360,7 @@
                   </tr>
                   <tr>
                     <td class="logo" style="line-height: 1px" valign="middle" align="left">
-                      <a href="https://www.nsoftdev.com/" target="_blank" style="text-decoration: none">
+                      <a href="https://www.nsoftdev.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none">
                         <img
                           src="https://media.licdn.com/dms/image/v2/D4D0BAQFeMnr__zt2Ew/company-logo_200_200/company-logo_200_200/0/1704995304827/nsoft_team_logo?e=1759363200&v=beta&t=GaqZEdFyRKfQQtqzzmMKJD2mksogOn3q1fCpg4w54_g"
                           alt="nSoft" class="hover" width="77" border="0" />
@@ -432,10 +432,25 @@
                               <br />
 
                               <div dir="rtl">
-<p>שלום רב וברוכים השבים לניוזלטר הטכנולוגי שלנו!</p>
-<p>השבוע אנו מביאים לכם ארבעה נושאים מפתחים בעולם הפיתוח המודרני: החל מ-TanStack DB החדש שמבטיח לשנות את האופן שבו אנו מנהלים מידע באפליקציות ווב, דרך טכניקות מתקדמות ב-React Query שיכולות להגביר משמעותיות את הביצועים של האפליקציות שלכם, ועד לעקרונות עיצוב חכמים שיעזרו לכם לכתוב קוד נקי יותר ולהימנע מכמה פיתולים נפוצים בפיתוח.</p>
-<p>קריאה מהנה!</p>
+  השבוע אנחנו נכנסים עמוק יותר לניהול state בצד לקוח, ומגלים כמה מהלכים ספציפיים
+  שיכולים לעשות הבדל ענק בקוד שלכם.<br /><br />
+
+  כי לפעמים כל מה שרציתם זה להציג כמה הודעות - ובסוף אתם בונים תשתית סנכרון שלמה
+  🤯<br /><br />
+
+  אז על מה נדבר?<br /><br />
+
+  איך TanStack DB מביא גישה חדשה לגמרי לאחסון נתונים בדפדפן, עם שאילתות SQL
+  וזרימה בזמן אמת.<br />
+  איך React Query Selectors יכולים לחסוך לכם רינדורים מיותרים ולשפר ביצועים
+  משמעותית.<br />
+  למה כדאי לחשב state ישירות מהשרת - במקום להחזיק אותו כפול ב-client.<br />
+  ואם אתם עדיין עוטפים כל פונקציה ב-<code>useCallback</code>, אולי הגיע הזמן
+  לעצור ולשאול למה בכלל.<br /><br />
+
+  כל מאמר כאן נוגע בנקודה כואבת מוכרת - ופותח פתרון מעשי.<br /><br />
 </div>
+
 
                               <p>&nbsp;</p>
 
@@ -445,7 +460,7 @@
 
                               <p>
                                 מייסד,
-                                <a href="https://www.nsoftdev.com/" target="_blank" style="
+                                <a href="https://www.nsoftdev.com/" target="_blank" rel="noopener noreferrer" style="
                                       color: #f1af00;
                                       text-decoration: none;
                                     ">
@@ -595,7 +610,7 @@
                                             font-size: 14px;
                                             text-transform: uppercase;
                                           " align="center" class="pop">
-                                          <a href="https://www.youtube.com/watch?v&#x3D;bfOmM1FKsaQ" target="_blank" style="
+                                          <a href="https://www.youtube.com/watch?v&#x3D;bfOmM1FKsaQ" target="_blank" rel="noopener noreferrer" style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
@@ -748,7 +763,7 @@
                                             font-size: 14px;
                                             text-transform: uppercase;
                                           " align="center" class="pop">
-                                          <a href="https://tkdodo.eu/blog/react-query-selectors-supercharged" target="_blank" style="
+                                          <a href="https://tkdodo.eu/blog/react-query-selectors-supercharged" target="_blank" rel="noopener noreferrer" style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
@@ -901,7 +916,7 @@
                                             font-size: 14px;
                                             text-transform: uppercase;
                                           " align="center" class="pop">
-                                          <a href="https://tkdodo.eu/blog/deriving-client-state-from-server-state" target="_blank" style="
+                                          <a href="https://tkdodo.eu/blog/deriving-client-state-from-server-state" target="_blank" rel="noopener noreferrer" style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
@@ -1013,15 +1028,23 @@
                               " align="left" class="rale">
                               <!-- Article Text  -->
                               <div dir="rtl">
-<h3>useCallback: מתי באמת צריך ומתי זה מיותר</h3>
-<p>אם אתם מזהים את עצמכם באחת משתי הנקודות הראשונות למטה, אתם לא לבד: 1) העתקנו מקוד אחר או סמכנו על AI שידחוף לנו קוד, 2) אנחנו כותבים את הקוד בעצמנו אבל לא סגורים על מה אנחנו עושים.</p>
+  אם אתם מזהים את עצמכם באחת משתי הנקודות הראשונות למטה, אתם לא לבד:<br />
+  1) העתקנו מקוד אחר או סמכנו על AI שידחוף לנו קוד,<br />
+  2) אנחנו כותבים את הקוד בעצמנו אבל לא סגורים על מה אנחנו עושים.<br /><br />
 
-<p>במהלך השנים, useCallback נהיה סוג של קישוט קבוע בקוד של הרבה מפתחים. אבל האמת? ברוב המקרים הוא פשוט מיותר. React יודעת לנהל רינדורים חכמים הרבה יותר ממה שאנחנו נותנים לה קרדיט.</p>
+  במהלך השנים, useCallback נהיה סוג של קישוט קבוע בקוד של הרבה מפתחים. אבל האמת?
+  ברוב המקרים הוא פשוט מיותר. React יודעת לנהל רינדורים חכמים הרבה יותר ממה
+  שאנחנו נותנים לה קרדיט.<br /><br />
 
-<p>לעטוף כל פונקציה ב-useCallback "ליתר ביטחון" זה כמו להסתובב עם מטרייה כשאין גשם - זה אולי מרגיש נכון, אבל לא באמת עוזר. רק במקרים שבהם שינוי של הפונקציה גורם לרינדור מיותר בקומפוננטה אחרת, או כשיש חישוב כבד, יש הצדקה להשתמש בו.</p>
+  לעטוף כל פונקציה ב-useCallback "ליתר ביטחון" זה כמו להסתובב עם מטרייה כשאין
+  גשם - זה אולי מרגיש נכון, אבל לא באמת עוזר. רק במקרים שבהם שינוי של הפונקציה
+  גורם לרינדור מיותר בקומפוננטה אחרת, או כשיש חישוב כבד, יש הצדקה להשתמש בו.<br /><br />
 
-<p>הפוסט של דומיניק בנושא הוא, כרגיל, מצוין וחד. הוא מזכיר שבעתיד, עם הקומפיילר של React, כל ההתעסקות ב-memoization תהיה אוטומטית - ואז כל הדיון הזה יהיה חלק מההיסטוריה.</p>
+  הפוסט של דומיניק בנושא הוא, כרגיל, מצוין וחד. הוא מזכיר שבעתיד, עם הקומפיילר
+  של React, כל ההתעסקות ב-memoization תהיה אוטומטית - ואז כל הדיון הזה יהיה חלק
+  מההיסטוריה.
 </div>
+
                               <!-- /Article Text  -->
                             </td>
                           </tr>
@@ -1054,7 +1077,7 @@
                                             font-size: 14px;
                                             text-transform: uppercase;
                                           " align="center" class="pop">
-                                          <a href="https://tkdodo.eu/blog/the-useless-use-callback" target="_blank" style="
+                                          <a href="https://tkdodo.eu/blog/the-useless-use-callback" target="_blank" rel="noopener noreferrer" style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
@@ -1169,7 +1192,7 @@
                       </tr>
                       <tr>
                         <td align="center" width="100%">
-                          <a href="https://www.nsoftdev.com/" target="_blank" style="text-decoration: none"><img
+                          <a href="https://www.nsoftdev.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: none"><img
                               alt="nSoft" border="0" class="hover"
                               src="https://media.licdn.com/dms/image/v2/D4D0BAQFeMnr__zt2Ew/company-logo_200_200/company-logo_200_200/0/1704995304827/nsoft_team_logo?e=1759363200&v=beta&t=GaqZEdFyRKfQQtqzzmMKJD2mksogOn3q1fCpg4w54_g"
                               width="87" />
