@@ -1,396 +1,461 @@
 <html dir="rtl">
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Raleway:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <title>nSoft</title>
-  <style type="text/css">
-    body * {
-      /* font-family: "Raleway", Arial, sans-serif; */
-      font-family:
-        "Noto Sans Hebrew", sans-serif;
-    }
-
-    td[class].play {
-      font-family: "Playfair Display", Georgia, Times, serif !important;
-    }
-
-    td[class].rale {
-      font-family: "Raleway", Helvetica, Arial, sans-serif !important;
-    }
-
-    span {
-      direction: rtl;
-    }
-
-    div,
-    p,
-    a,
-    li,
-    td {
-      -webkit-text-size-adjust: none;
-    }
-
-    * {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    td {
-      word-break: break-word;
-    }
-
-    a {
-      word-break: break-word;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    body .ReadMsgBody {
-      width: 100%;
-      background-color: #f5f5f5;
-    }
-
-    body .ExternalClass {
-      width: 100%;
-      background-color: #f5f5f5;
-    }
-
-    body {
-      width: 100%;
-      height: 100%;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing:
-        antialiased;
-    }
-
-    html {
-      background-color: #f5f5f5;
-      width: 100%;
-    }
-
-    p {
-      padding: 0 !important;
-      margin-top: 0 !important;
-      margin-right: 0 !important;
-      margin-bottom: 0 !important;
-      margin-left: 0 !important;
-    }
-
-    img {
-      user-drag: none;
-      -moz-user-select: none;
-      -webkit-user-drag: none;
-    }
-
-    .hover:hover {
-      opacity: 0.85;
-      filter: alpha(opacity=85);
-    }
-
-    .img600 img {
-      width: 600px;
-      height: auto;
-    }
-
-    .radius10 img {
-      border-radius: 10px !important;
-    }
-  </style>
-  <style type="text/css">
-    @media only screen and (max-width: 820px) {
-      .wrap {
-        width: 100% !important;
-        clear: both;
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,500&family=Raleway:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>nSoft</title>
+    <style type="text/css">
+      body * {
+        /* font-family: "Raleway", Arial, sans-serif; */
+        font-family: "Noto Sans Hebrew", sans-serif;
       }
 
-      .pad20 {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        text-align: center !important;
-        clear:
-          both;
+      td[class].play {
+        font-family: "Playfair Display", Georgia, Times, serif !important;
       }
 
-      .padl10 {
-        padding-left: 10px !important;
-        clear: both;
+      td[class].rale {
+        font-family: "Raleway", Helvetica, Arial, sans-serif !important;
       }
-    }
-  </style>
-  <style type="text/css">
-    @media only screen and (max-width: 640px) {
+
+      span {
+        direction: rtl;
+      }
+
+      div,
+      p,
+      a,
+      li,
+      td {
+        -webkit-text-size-adjust: none;
+      }
+
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      td {
+        word-break: break-word;
+      }
+
+      a {
+        word-break: break-word;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      body .ReadMsgBody {
+        width: 100%;
+        background-color: #f5f5f5;
+      }
+
+      body .ExternalClass {
+        width: 100%;
+        background-color: #f5f5f5;
+      }
+
       body {
-        width: auto !important;
+        width: 100%;
+        height: 100%;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
       }
 
-      .wrap {
-        width: 100% !important;
-        clear: both;
+      html {
+        background-color: #f5f5f5;
+        width: 100%;
       }
 
-      .full {
-        width: 100% !important;
-        clear: both;
+      p {
+        padding: 0 !important;
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
       }
 
-      .mobile {
-        width: 100% !important;
-        padding-left:
-          30px;
-        padding-right: 30px;
-        clear: both;
+      img {
+        user-drag: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
       }
 
-      .fullCenter {
-        width: 100% !important;
-        text-align: center !important;
-        clear: both;
-      }
-
-      .fullLeft {
-        width: 100% !important;
-        text-align: left !important;
-        clear: both;
-      }
-
-      .erase {
-        display: none;
-      }
-
-      .buttonScale {
-        float: none !important;
-        text-align:
-          center !important;
-        display: inline-block !important;
-        clear: both;
-      }
-
-      .pad20 {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        text-align: center !important;
-        clear: both;
-      }
-
-      .pad30 {
-        padding-left: 30px !important;
-        padding-right: 30px !important;
-        text-align: center !important;
-        clear: both;
-      }
-
-      .mcenter {
-        text-align: center !important;
-        vertical-align:
-          middle;
-        clear: both !important;
-        float: none;
-        margin: 0px !important;
-      }
-
-      .h20 {
-        width: 100% !important;
-        height: 20px !important;
-      }
-
-      .h30 {
-        width:
-          100% !important;
-        height: 30px !important;
-      }
-
-      .pad20 {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        text-align: center !important;
-        clear: both;
-      }
-
-      .padl10 {
-        padding-left: 10px !important;
-        clear: both;
+      .hover:hover {
+        opacity: 0.85;
+        filter: alpha(opacity=85);
       }
 
       .img600 img {
-        width: 100% !important;
+        width: 600px;
+        height: auto;
       }
 
-      .imgfull img {
-        width: 100% !important;
+      .radius10 img {
+        border-radius: 10px !important;
       }
-    }
-  </style>
-  <style type="text/css">
-    @media only screen and (max-width: 479px) {
-      body {
-        width: auto !important;
-      }
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 820px) {
+        .wrap {
+          width: 100% !important;
+          clear: both;
+        }
 
-      .wrap {
-        width: 100% !important;
-        clear: both;
-      }
+        .pad20 {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          text-align: center !important;
+          clear: both;
+        }
 
-      .full {
-        width: 100% !important;
-        clear: both;
+        .padl10 {
+          padding-left: 10px !important;
+          clear: both;
+        }
       }
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 640px) {
+        body {
+          width: auto !important;
+        }
 
-      .mobile {
-        width: 100% !important;
-        padding-left:
-          30px;
-        padding-right: 30px;
-        clear: both;
+        .wrap {
+          width: 100% !important;
+          clear: both;
+        }
+
+        .full {
+          width: 100% !important;
+          clear: both;
+        }
+
+        .mobile {
+          width: 100% !important;
+          padding-left: 30px;
+          padding-right: 30px;
+          clear: both;
+        }
+
+        .fullCenter {
+          width: 100% !important;
+          text-align: center !important;
+          clear: both;
+        }
+
+        .fullLeft {
+          width: 100% !important;
+          text-align: left !important;
+          clear: both;
+        }
+
+        .erase {
+          display: none;
+        }
+
+        .buttonScale {
+          float: none !important;
+          text-align: center !important;
+          display: inline-block !important;
+          clear: both;
+        }
+
+        .pad20 {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          text-align: center !important;
+          clear: both;
+        }
+
+        .pad30 {
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+          text-align: center !important;
+          clear: both;
+        }
+
+        .mcenter {
+          text-align: center !important;
+          vertical-align: middle;
+          clear: both !important;
+          float: none;
+          margin: 0px !important;
+        }
+
+        .h20 {
+          width: 100% !important;
+          height: 20px !important;
+        }
+
+        .h30 {
+          width: 100% !important;
+          height: 30px !important;
+        }
+
+        .pad20 {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          text-align: center !important;
+          clear: both;
+        }
+
+        .padl10 {
+          padding-left: 10px !important;
+          clear: both;
+        }
+
+        .img600 img {
+          width: 100% !important;
+        }
+
+        .imgfull img {
+          width: 100% !important;
+        }
       }
+    </style>
+    <style type="text/css">
+      @media only screen and (max-width: 479px) {
+        body {
+          width: auto !important;
+        }
 
-      .fullCenter {
-        width: 100% !important;
-        text-align: center !important;
-        clear: both;
+        .wrap {
+          width: 100% !important;
+          clear: both;
+        }
+
+        .full {
+          width: 100% !important;
+          clear: both;
+        }
+
+        .mobile {
+          width: 100% !important;
+          padding-left: 30px;
+          padding-right: 30px;
+          clear: both;
+        }
+
+        .fullCenter {
+          width: 100% !important;
+          text-align: center !important;
+          clear: both;
+        }
+
+        .fullLeft {
+          width: 100% !important;
+          text-align: left !important;
+          clear: both;
+        }
+
+        .erase {
+          display: none;
+        }
+
+        .buttonScale {
+          float: none !important;
+          text-align: center !important;
+          display: inline-block !important;
+          clear: both;
+        }
+
+        .pad20 {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          text-align: center !important;
+          clear: both;
+        }
+
+        .pad30 {
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+          text-align: center !important;
+          clear: both;
+        }
+
+        .mcenter {
+          text-align: center;
+          vertical-align: middle;
+          clear: both !important;
+          float: none;
+          margin: 0px !important;
+        }
+
+        .h20 {
+          width: 100% !important;
+          height: 20px !important;
+        }
+
+        .h30 {
+          width: 100% !important;
+          height: 30px !important;
+        }
+
+        .pad20 {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          text-align: center !important;
+          clear: both;
+        }
+
+        .padl10 {
+          padding-left: 10px !important;
+          clear: both;
+        }
+
+        .img600 img {
+          width: 100% !important;
+        }
+
+        .imgfull img {
+          width: 100% !important;
+        }
       }
-
-      .fullLeft {
-        width: 100% !important;
-        text-align: left !important;
-        clear: both;
+    </style>
+    <style>
+      li {
+        margin-top: 10px;
       }
+    </style>
+  </head>
 
-      .erase {
-        display: none;
-      }
-
-      .buttonScale {
-        float: none !important;
-        text-align:
-          center !important;
-        display: inline-block !important;
-        clear: both;
-      }
-
-      .pad20 {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        text-align: center !important;
-        clear: both;
-      }
-
-      .pad30 {
-        padding-left: 30px !important;
-        padding-right: 30px !important;
-        text-align: center !important;
-        clear: both;
-      }
-
-      .mcenter {
-        text-align: center;
-        vertical-align: middle;
-        clear: both !important;
-        float: none;
-        margin: 0px !important;
-      }
-
-      .h20 {
-        width: 100% !important;
-        height: 20px !important;
-      }
-
-      .h30 {
-        width: 100% !important;
-        height: 30px !important;
-      }
-
-      .pad20 {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        text-align: center !important;
-        clear: both;
-      }
-
-      .padl10 {
-        padding-left: 10px !important;
-        clear: both;
-      }
-
-      .img600 img {
-        width: 100% !important;
-      }
-
-      .imgfull img {
-        width: 100% !important;
-      }
-    }
-  </style>
-  <style>
-    li {
-      margin-top: 10px
-    }
-  </style>
-</head>
-
-<body style="margin: 0; padding: 0">
-  <table width="100%" bgcolor="#EAEAEA" cellspacing="0" cellpadding="0" border="0" align="center"
-    style="width: 100%; background: #eaeaea">
-    <tbody>
-      <tr>
-        <td>
-          <!-- Top module -->
-          <table class="wrap" style="
+  <body style="margin: 0; padding: 0">
+    <table
+      width="100%"
+      bgcolor="#EAEAEA"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      align="center"
+      style="width: 100%; background: #eaeaea"
+    >
+      <tbody>
+        <tr>
+          <td>
+            <!-- Top module -->
+            <table
+              class="wrap"
+              style="
                 width: 800px;
                 background: #f1af00 url('/images/headerbg2.png') center top
                   no-repeat;
-              " width="800" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#F1AF00"
-            background="/images/headerbg2.png">
-            <tr>
-              <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
-                <table class="wrap" style="width: 740px" width="740" cellspacing="0" cellpadding="0" border="0"
-                  align="center">
-                  <tr>
-                    <td colspan="2" style="font-size: 1px; line-height: 1px" width="100%" height="38">
-                      &nbsp;
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="logo" style="line-height: 1px" valign="middle" align="left">
-                      <a href="https://www.nsoftdev.com/" target="_blank" style="text-decoration: none">
-                        <img
-                          src="https://media.licdn.com/dms/image/v2/D4D0BAQFeMnr__zt2Ew/company-logo_200_200/company-logo_200_200/0/1704995304827/nsoft_team_logo?e=1759363200&v=beta&t=GaqZEdFyRKfQQtqzzmMKJD2mksogOn3q1fCpg4w54_g"
-                          alt="nSoft" class="hover" width="77" border="0" />
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="2" height="30" style="font-size: 1px; line-height: 1px">
-                      &nbsp;
-                    </td>
-                  </tr>
-                </table>
-                <table class="full" style="
+              "
+              width="800"
+              cellspacing="0"
+              cellpadding="0"
+              border="0"
+              align="center"
+              bgcolor="#F1AF00"
+              background="/images/headerbg2.png"
+            >
+              <tr>
+                <td
+                  style="font-size: 1px; line-height: 1px"
+                  width="100%"
+                  class="pad20"
+                >
+                  <table
+                    class="wrap"
+                    style="width: 740px"
+                    width="740"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="center"
+                  >
+                    <tr>
+                      <td
+                        colspan="2"
+                        style="font-size: 1px; line-height: 1px"
+                        width="100%"
+                        height="38"
+                      >
+                        &nbsp;
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        class="logo"
+                        style="line-height: 1px"
+                        valign="middle"
+                        align="left"
+                      >
+                        <a
+                          href="https://www.nsoftdev.com/"
+                          target="_blank"
+                          style="text-decoration: none"
+                        >
+                          <img
+                            src="https://cdn.prod.website-files.com/655cb5bd2de1fe156ffb8384/68d468634b0ff8b7bf799d9c_nsoft_rosh_hashana.jpeg"
+                            src="https://media.licdn.com/dms/image/v2/D4D0BAQFeMnr__zt2Ew/company-logo_200_200/company-logo_200_200/0/1704995304827/nsoft_team_logo?e=1759363200&v=beta&t=GaqZEdFyRKfQQtqzzmMKJD2mksogOn3q1fCpg4w54_g"
+                            alt="nSoft"
+                            class="hover"
+                            width="100%"
+                            border="0"
+                          />
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        colspan="2"
+                        height="30"
+                        style="font-size: 1px; line-height: 1px"
+                      >
+                        &nbsp;
+                      </td>
+                    </tr>
+                  </table>
+                  <table
+                    class="full"
+                    style="
                       width: 600px;
                       border-radius: 20px;
                       background: #ffffff;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
-                  <tr>
-                    <td align="right" class="pad30">
-                      <table class="full" style="width: 520px; border-radius: 20px" width="520" cellspacing="0"
-                        cellpadding="0" border="0" align="center">
-                        <tr>
-                          <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
-                            &nbsp;
-                          </td>
-                        </tr>
+                    "
+                    width="600"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="center"
+                    bgcolor="#ffffff"
+                  >
+                    <tr>
+                      <td align="right" class="pad30">
+                        <table
+                          class="full"
+                          style="width: 520px; border-radius: 20px"
+                          width="520"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          align="center"
+                        >
+                          <tr>
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
+                              &nbsp;
+                            </td>
+                          </tr>
 
-                        <tr>
-                          <td style="
+                          <tr>
+                            <td
+                              style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -398,8 +463,12 @@
                                 font-size: 28px;
                                 text-align: right;
                                 line-height: 1.5;
-                              " align="left" class="play">
-                            <div style="
+                              "
+                              align="left"
+                              class="play"
+                            >
+                              <div
+                                style="
                                   direction: rtl;
                                   text-align: right;
                                   color: #f1af00;
@@ -407,18 +476,25 @@
                                   font-weight: 500;
                                   font-family: 'Playfair Display', Georgia,
                                     Times, serif;
-                                ">
-                              כלים מתקדמים לפיתוח ובינה מלאכותית
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
-                            &nbsp;
-                          </td>
-                        </tr>
-                        <tr>
-                          <td style="
+                                "
+                              >
+                                שנה חדשה, קוד נקי: Cursor, TanStack ו־knip
+                                שעושים סדר בבלגן
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -426,72 +502,118 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              " align="left" class="rale">
-                            <div dir="rtl">
-                              <p>היי {{subscriber.first_name}}!</p>
-                              <br />
-
+                              "
+                              align="left"
+                              class="rale"
+                            >
                               <div dir="rtl">
-    <p>שלום רב!</p>
+                                <p>היי {{subscriber.first_name}}!</p>
+                                <br />
 
-    <p>השבוע אנחנו נכנסים לעומק הכלים שמשנים בפועל את איך שאנחנו עובדים. מ-<strong>Cursor AI Agents</strong> שלוקחים על עצמם משימות שלמות ופותרים אותן כמו מפתחים אמיתיים, דרך <strong>TanStack DB</strong> שסוף סוף מביא לנו את השכבת הנתונים שתמיד חיפשנו.</p>
+                                <div dir="rtl">
+                                  התחלנו את תקופת החגים וכולם מדברים על התחדשות,
+                                  סדר וניקיון. אז למה לא גם בקוד? 😉
+                                  <br />
+                                  אם כבר לשים תפוח בדבש, אז שיהיה על שולחן עבודה
+                                  מסודר, בלי קוד מת, בלי boilerplate מיותר ובלי
+                                  PRים שלא נגמרים.
+                                  <br />
+                                  בין ריפקטורים לאופטימיזציות, זה בדיוק הזמן
+                                  להתקדם לכלים שעובדים בשבילכם.
+                                  <br />
+                                  <br />
+                                  בדיוק עבור זה ריכזתי השבוע כלים ופיצ'רים שבאמת
+                                  עושים הבדל:
+                                  <br />
+                                  Cursor שהופך ל-mini dev אמיתי, TanStack DB
+                                  שמביא data layer שלא ידעתם שחסר, ו-knip שמוחק
+                                  קבצים מיותרים בלי להסס.
+                                  <br /><br />
+                                  שיהיה ראש שנה מתוק, נקי מקונפליקטים ומלא
+                                  ב-context טוב 🍎
+                                </div>
 
-    <p>נגלה איך <strong>nip</strong> חוסך לנו את הבושות של קוד מת ב-PR (כן, אותן 50 הערות מהראש צוות), ונסיים עם מסע אמיתי של מפתח שהחליט להפסיק לשחק עם AI ולהבין איך הוא באמת עובד - ומה שקרה אחר כך.</p>
+                                <p>&nbsp;</p>
 
-    <p>ארבעה סיפורים אמיתיים מהשטח - בלי פלאפל, רק מה שעובד ומה שלא. בואו נתחיל!</p>
-</div>
+                                <p>שלך,</p>
 
-                              <p>&nbsp;</p>
+                                <p>נדב ליבוביץ&#39;</p>
 
-                              <p>שלך,</p>
-
-                              <p>נדב ליבוביץ&#39;</p>
-
-                              <p>
-                                מייסד,
-                                <a href="https://www.nsoftdev.com/" target="_blank" style="
+                                <p>
+                                  מייסד,
+                                  <a
+                                    href="https://www.nsoftdev.com/"
+                                    target="_blank"
+                                    style="
                                       color: #f1af00;
                                       text-decoration: none;
-                                    ">
-                                  nSoft
-                                </a>
-                              </p>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
-                            &nbsp;
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td style="font-size: 1px; line-height: 1px" width="100%" height="20">
-                &nbsp;
-              </td>
-            </tr>
-          </table>
-          <!-- email body -->
+                                    "
+                                  >
+                                    nSoft
+                                  </a>
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="100%"
+                              height="30"
+                              style="font-size: 1px; line-height: 1px"
+                            >
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td
+                  style="font-size: 1px; line-height: 1px"
+                  width="100%"
+                  height="20"
+                >
+                  &nbsp;
+                </td>
+              </tr>
+            </table>
+            <!-- email body -->
 
-          <table class="wrap" style="width: 800px; background: #ffffff" width="800" cellspacing="0" cellpadding="0"
-            border="0" align="center" bgcolor="#ffffff">
-            <!-- Block seperator -->
-            <tr>
-              <td style="font-size: 1px; line-height: 1px" width="100%" height="30">
-                &nbsp;
-              </td>
-            </tr>
-            <!-- /Block seperator -->
+            <table
+              class="wrap"
+              style="width: 800px; background: #ffffff"
+              width="800"
+              cellspacing="0"
+              cellpadding="0"
+              border="0"
+              align="center"
+              bgcolor="#ffffff"
+            >
+              <!-- Block seperator -->
+              <tr>
+                <td
+                  style="font-size: 1px; line-height: 1px"
+                  width="100%"
+                  height="30"
+                >
+                  &nbsp;
+                </td>
+              </tr>
+              <!-- /Block seperator -->
 
               <!-- Article block -->
               <tr>
-                <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
-                  <table class="full" style="
+                <td
+                  style="font-size: 1px; line-height: 1px"
+                  width="100%"
+                  class="pad20"
+                >
+                  <table
+                    class="full"
+                    style="
                       width: 600px;
                       -webkit-border-top-left-radius: 20px;
                       -webkit-border-top-right-radius: 20px;
@@ -501,34 +623,67 @@
                       border-top-right-radius: 20px;
                       background: #ffffff;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+                    "
+                    width="600"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="center"
+                    bgcolor="#ffffff"
+                  >
                     <tr>
                       <td width="100%" align="right" class="pad30">
-                        <table class="full" style="
+                        <table
+                          class="full"
+                          style="
                             width: 520px;
                             border-radius: 20px;
                             background: #ffffff;
-                          " width="520" cellspacing="0" cellpadding="0" border="0" align="center">
+                          "
+                          width="520"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          align="center"
+                        >
                           <tr>
-                            <td width="100%" height="40" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="40"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <td width="100%" class="imgfull radius10">
-                              <a href="https://www.youtube.com/watch?v&#x3D;8QN23ZThdRY" style="text-decoration: none">
-                                <img src="https://img.youtube.com/vi/8QN23ZThdRY/maxresdefault.jpg" alt="Cursor AI Agents: עבודה כמו 10 מפתחים" class="hover" width="520" border="0" />
+                              <a
+                                href="https://www.youtube.com/watch?v&#x3D;8QN23ZThdRY"
+                                style="text-decoration: none"
+                              >
+                                <img
+                                  src="https://img.youtube.com/vi/8QN23ZThdRY/maxresdefault.jpg"
+                                  alt="Cursor AI Agents: קיבלתם קידום ו-10 מפתחים תחתיכם"
+                                  class="hover"
+                                  width="520"
+                                  border="0"
+                                />
                               </a>
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <!-- Article Headline  -->
-                            <td style="
+                            <td
+                              style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -536,18 +691,29 @@
                                 font-size: 24px;
                                 text-align: right;
                                 line-height: 1.5;
-                              " align="left" class="play">
-                              <div dir="rtl">Cursor AI Agents: עבודה כמו 10 מפתחים</div>
+                              "
+                              align="left"
+                              class="play"
+                            >
+                              <div dir="rtl">
+                                Cursor AI Agents: קיבלתם קידום ו-10 מפתחים
+                                תחתיכם
+                              </div>
                             </td>
                             <!-- /Article Headline  -->
                           </tr>
                           <tr>
-                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td style="
+                            <td
+                              style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -555,43 +721,92 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              " align="left" class="rale">
+                              "
+                              align="left"
+                              class="rale"
+                            >
                               <!-- Article Text  -->
                               <div dir="rtl">
-    <p>נכנסים לעבודה בבוקר ⏰ 3 באגים קטנים מחכים על השולחן, ועוד 2 תיקוני UI שפשוט מבקשים להיסגר. הקוד מוכר, התיקונים ברורים - באגים דומים כבר תוקנו עשרות פעמים בשנתיים האחרונות.</p>
+                                נכנסים לעבודה בבוקר ⏰
+                                <br /><br />
+                                3 באגים קטנים מחכים על השולחן, ועוד 2 תיקוני UI
+                                שבא לסגור.
+                                <br /><br />
+                                הקוד מוכר, התיקונים ברורים – כאלה שכבר תוקנו
+                                עשרות פעמים.
+                                <br /><br />
+                                אבל רק המחשבה על git pull, בדיקות ופתיחת PR?
+                                <br />
+                                הקפה הופך לחמוץ ☕
+                                <br /><br />
+                                בשביל זה נכנסו ה-Agents של Cursor.
+                                <br />
+                                לא autocomplete – מיני-מפתחים אמיתיים.
+                                <br />
+                                מבינים קוד, מריצים טסטים, פותחים PR, לפעמים גם
+                                מתקנים את עצמם.
+                                <br /><br />
+                                הקסם קורה כשנותנים לכל Agent טיקט משלו.
+                                <br />
+                                שיחה חדשה, קונטקסט מדויק, קבצים ממוקדים –
+                                <br />
+                                ופתאום זה מרגיש כמו מפתח שמכיר את הקוד.
+                                <br /><br />
+                                אפשר להריץ את זה מהעורך, CLI, Slack ואפילו מתוך
+                                CI.
+                                <br />
+                                ומי מדגים את זה טוב יותר מלִי רוב – הפנים של
+                                Cursor (אחרי 5 שנים ב-Vercel) 🎉
+                              </div>
 
-    <p>אבל רק המחשבה על לפתוח PR, לעשות git pull, לבדוק שהכל עובר כמו שצריך - גורמת לקפה שביד להפוך פתאום לחמוץ ☕</p>
-
-    <p>בדיוק בשביל זה נכנסו ה-Agents של #Cursor. זה לא איזה autocomplete או אסיסטנט. אלו ממש מיני-מפתחים - כאלה שמבינים את הקוד, מריצים בדיקות, פותחים PR, ובמקרים מסוימים אפילו מתקנים את עצמם אם משהו נכשל.</p>
-
-    <p>הקסם קורה כשמתייחסים לכל Agent כמשימה נפרדת. שיחה חדשה לכל טיקט. קונטקסט מדויק. קבצים ממוקדים. ואז פתאום - התוצאה מרגישה כאילו היא נכתבה על ידי מישהו שמכיר את הפרויקט מבפנים.</p>
-
-    <p>אפשר להריץ את זה מהעורך, מה-CLI, מ-Slack ואפילו בתוך CI. ומי יותר טוב מלהדגים את זה מאשר לי רוב - שהוא הפנים של Cursor עצמו (אחרי חמש שנים ב-Vercel) 🎉</p>
-</div>
                               <!-- /Article Text  -->
                             </td>
                           </tr>
 
                           <tr>
-                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="30"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <td width="100%" align="center" class="">
-                              <table align="left" cellspacing="0" cellpadding="0" border="0" class="hover">
+                              <table
+                                align="left"
+                                cellspacing="0"
+                                cellpadding="0"
+                                border="0"
+                                class="hover"
+                              >
                                 <tr>
-                                  <td width="100%" align="center" class="" style="
+                                  <td
+                                    width="100%"
+                                    align="center"
+                                    class=""
+                                    style="
                                       background: #f1af00;
                                       border-radius: 5px;
-                                    " bgcolor="#F1AF00">
-                                    <table width="100%" align="left" cellspacing="0" cellpadding="0" style="
+                                    "
+                                    bgcolor="#F1AF00"
+                                  >
+                                    <table
+                                      width="100%"
+                                      align="left"
+                                      cellspacing="0"
+                                      cellpadding="0"
+                                      style="
                                         margin-right: 30px;
                                         mso-padding-left-alt: 15px;
                                         mso-padding-right-alt: 15px;
-                                      ">
+                                      "
+                                    >
                                       <tr>
-                                        <td height="35" style="
+                                        <td
+                                          height="35"
+                                          style="
                                             mso-padding-alt: 0px 10px 0px 10px;
                                             color: #ffffff;
                                             font-family: Helvetica, Arial,
@@ -599,13 +814,20 @@
                                             font-weight: 700;
                                             font-size: 14px;
                                             text-transform: uppercase;
-                                          " align="center" class="pop">
-                                          <a href="https://www.youtube.com/watch?v&#x3D;8QN23ZThdRY" target="_blank" style="
+                                          "
+                                          align="center"
+                                          class="pop"
+                                        >
+                                          <a
+                                            href="https://www.youtube.com/watch?v&#x3D;8QN23ZThdRY"
+                                            target="_blank"
+                                            style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
                                               text-decoration: none;
-                                            ">
+                                            "
+                                          >
                                             למאמר המלא
                                           </a>
                                         </td>
@@ -617,21 +839,34 @@
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="50"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="1" style="
+                            <td
+                              width="100%"
+                              height="1"
+                              style="
                                 font-size: 1px;
                                 line-height: 1px;
                                 background: #d7d7d7;
-                              " bgcolor="#D7D7D7;">
+                              "
+                              bgcolor="#D7D7D7;"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="50"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
@@ -644,8 +879,14 @@
               <!-- /Article block -->
               <!-- Article block -->
               <tr>
-                <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
-                  <table class="full" style="
+                <td
+                  style="font-size: 1px; line-height: 1px"
+                  width="100%"
+                  class="pad20"
+                >
+                  <table
+                    class="full"
+                    style="
                       width: 600px;
                       -webkit-border-top-left-radius: 20px;
                       -webkit-border-top-right-radius: 20px;
@@ -655,34 +896,67 @@
                       border-top-right-radius: 20px;
                       background: #ffffff;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+                    "
+                    width="600"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="center"
+                    bgcolor="#ffffff"
+                  >
                     <tr>
                       <td width="100%" align="right" class="pad30">
-                        <table class="full" style="
+                        <table
+                          class="full"
+                          style="
                             width: 520px;
                             border-radius: 20px;
                             background: #ffffff;
-                          " width="520" cellspacing="0" cellpadding="0" border="0" align="center">
+                          "
+                          width="520"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          align="center"
+                        >
                           <tr>
-                            <td width="100%" height="40" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="40"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <td width="100%" class="imgfull radius10">
-                              <a href="https://frontendatscale.com/blog/tanstack-db/" style="text-decoration: none">
-                                <img src="https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/coding-vs-programming-2.jpg" alt="TanStack DB: המדריך האינטראקטיבי החדש" class="hover" width="520" border="0" />
+                              <a
+                                href="https://frontendatscale.com/blog/tanstack-db/"
+                                style="text-decoration: none"
+                              >
+                                <img
+                                  src="https://www.goodcore.co.uk/blog/wp-content/uploads/2019/08/coding-vs-programming-2.jpg"
+                                  alt="TanStack DB: המדריך האינטראקטיבי החדש"
+                                  class="hover"
+                                  width="520"
+                                  border="0"
+                                />
                               </a>
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <!-- Article Headline  -->
-                            <td style="
+                            <td
+                              style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -690,18 +964,28 @@
                                 font-size: 24px;
                                 text-align: right;
                                 line-height: 1.5;
-                              " align="left" class="play">
-                              <div dir="rtl">TanStack DB: המדריך האינטראקטיבי החדש</div>
+                              "
+                              align="left"
+                              class="play"
+                            >
+                              <div dir="rtl">
+                                TanStack DB: המדריך האינטראקטיבי החדש
+                              </div>
                             </td>
                             <!-- /Article Headline  -->
                           </tr>
                           <tr>
-                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td style="
+                            <td
+                              style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -709,53 +993,89 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              " align="left" class="rale">
+                              "
+                              align="left"
+                              class="rale"
+                            >
                               <!-- Article Text  -->
                               <div dir="rtl">
-    <p>וואו. מזמן לא אמרתי וואו על בלוג פוסט - אבל וואו!!! 🤯</p>
+                                וואו. מזמן לא אמרתי וואו על בלוג פוסט - אבל
+                                וואו!!! 🤯
+                                <br /><br />
+                                הפוסט של Maxi Ferreira על TanStackDB פוגע בול
+                                בכאב שכולנו הרגשנו מתישהו בפרויקט.
+                                <br /><br />
+                                TanStackQuery הייתה ה‑golden standard. ניהול
+                                cache, תקשורת מול API, סנכרון עם השרת – הכל עבד.
+                                <br /><br />
+                                אבל תמיד היה חסר משהו. boilerplate, בלי data
+                                layer אמיתי, בלי collections, בלי שאילתות חיות
+                                או rollback.
+                                <br /><br />
+                                בפרויקטים גדולים – זה כבר התחיל להכביד.
+                                <br /><br />
+                                ואז הגיע TanStack DB – בדיוק מה שהיה חסר.
+                                <br /><br />
+                                Store ריאקטיבי שמרגיש כמו המשך ישיר ל‑TanStack
+                                Query. יש collections כמו טבלאות, Live Queries
+                                שמתעדכנים לבד, ו‑Transactional Mutations עם
+                                שליטה מלאה.
+                                <br /><br />
+                                לא מחליפים backend. לא ממציאים את הגלגל. פשוט
+                                מוסיפים אותו לפרויקט קיים – והקסם קורה.
+                                <br /><br />
+                                הכלי הזה מרגיש כמו פתרון שבא מהשטח, לא מרעיון
+                                תיאורטי 📚
+                              </div>
 
-    <p>הפוסט של Maxi Ferreira על #TanStackDB פשוט פוגע בול בכאב שכל אחד מאיתנו הרגיש מתישהו בפרויקט.</p>
-
-    <p>כי #TanStackQuery הייתה ה‑golden standard. ניהול cache, תקשורת מול API, סנכרון עם השרת - הכל עבד כמו שצריך.</p>
-
-    <p>אבל... תמיד הרגשנו שחסר משהו. היה שם לא מעט boilerplate. לא באמת היה לנו data layer. לא collections. לא שאילתות חיות. לא עדכונים עם rollback אמיתי.</p>
-
-    <p>וכשמגיעים לפרויקטים גדולים - החוסרים האלה מתחילים להכביד.</p>
-
-    <p>ואז Tanner והצוות שלו באו עם TanStack DB - והשלימו בדיוק את מה שהיה חסר.</p>
-
-    <p>Store ריאקטיבי שמרגיש כמו המשך טבעי ל‑TanStack Query. יש בו collections שמתנהגים כמו טבלאות, Live Queries שמתעדכנים לבד עם שינויים, ו‑Transactional Mutations שנותנים אופטימיות עם שליטה מלאה.</p>
-
-    <p>בלי להחליף את ה‑backend. בלי להמציא את הגלגל מחדש. פשוט מוסיפים אותו לפרויקט קיים - והקסם מתחיל לעבוד.</p>
-
-    <p>הכלי הזה מרגיש כמו משהו שנולד מתוך צורך אמיתי של מפתחים, לא איזה רעיון תיאורטי. 📚</p>
-
-    <p>הפוסט המהמם והאינטראקטיבי של Maxi כתוב בצורה מדויקת ומעשית - שווה לקרוא: תגיע למיטאפ הבא של vue. אני הולך לדבר על השילוב של השניים Nadav Frank</p>
-</div>
                               <!-- /Article Text  -->
                             </td>
                           </tr>
 
                           <tr>
-                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="30"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <td width="100%" align="center" class="">
-                              <table align="left" cellspacing="0" cellpadding="0" border="0" class="hover">
+                              <table
+                                align="left"
+                                cellspacing="0"
+                                cellpadding="0"
+                                border="0"
+                                class="hover"
+                              >
                                 <tr>
-                                  <td width="100%" align="center" class="" style="
+                                  <td
+                                    width="100%"
+                                    align="center"
+                                    class=""
+                                    style="
                                       background: #f1af00;
                                       border-radius: 5px;
-                                    " bgcolor="#F1AF00">
-                                    <table width="100%" align="left" cellspacing="0" cellpadding="0" style="
+                                    "
+                                    bgcolor="#F1AF00"
+                                  >
+                                    <table
+                                      width="100%"
+                                      align="left"
+                                      cellspacing="0"
+                                      cellpadding="0"
+                                      style="
                                         margin-right: 30px;
                                         mso-padding-left-alt: 15px;
                                         mso-padding-right-alt: 15px;
-                                      ">
+                                      "
+                                    >
                                       <tr>
-                                        <td height="35" style="
+                                        <td
+                                          height="35"
+                                          style="
                                             mso-padding-alt: 0px 10px 0px 10px;
                                             color: #ffffff;
                                             font-family: Helvetica, Arial,
@@ -763,13 +1083,20 @@
                                             font-weight: 700;
                                             font-size: 14px;
                                             text-transform: uppercase;
-                                          " align="center" class="pop">
-                                          <a href="https://frontendatscale.com/blog/tanstack-db/" target="_blank" style="
+                                          "
+                                          align="center"
+                                          class="pop"
+                                        >
+                                          <a
+                                            href="https://frontendatscale.com/blog/tanstack-db/"
+                                            target="_blank"
+                                            style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
                                               text-decoration: none;
-                                            ">
+                                            "
+                                          >
                                             למאמר המלא
                                           </a>
                                         </td>
@@ -781,21 +1108,34 @@
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="50"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="1" style="
+                            <td
+                              width="100%"
+                              height="1"
+                              style="
                                 font-size: 1px;
                                 line-height: 1px;
                                 background: #d7d7d7;
-                              " bgcolor="#D7D7D7;">
+                              "
+                              bgcolor="#D7D7D7;"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="50"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
@@ -808,8 +1148,14 @@
               <!-- /Article block -->
               <!-- Article block -->
               <tr>
-                <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
-                  <table class="full" style="
+                <td
+                  style="font-size: 1px; line-height: 1px"
+                  width="100%"
+                  class="pad20"
+                >
+                  <table
+                    class="full"
+                    style="
                       width: 600px;
                       -webkit-border-top-left-radius: 20px;
                       -webkit-border-top-right-radius: 20px;
@@ -819,34 +1165,67 @@
                       border-top-right-radius: 20px;
                       background: #ffffff;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+                    "
+                    width="600"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="center"
+                    bgcolor="#ffffff"
+                  >
                     <tr>
                       <td width="100%" align="right" class="pad30">
-                        <table class="full" style="
+                        <table
+                          class="full"
+                          style="
                             width: 520px;
                             border-radius: 20px;
                             background: #ffffff;
-                          " width="520" cellspacing="0" cellpadding="0" border="0" align="center">
+                          "
+                          width="520"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          align="center"
+                        >
                           <tr>
-                            <td width="100%" height="40" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="40"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <td width="100%" class="imgfull radius10">
-                              <a href="https://www.youtube.com/watch?v&#x3D;uhEkgWt-pUM" style="text-decoration: none">
-                                <img src="https://img.youtube.com/vi/uhEkgWt-pUM/maxresdefault.jpg" alt="ניקוי קוד עם nip: הסרת JavaScript מת" class="hover" width="520" border="0" />
+                              <a
+                                href="https://www.youtube.com/watch?v&#x3D;uhEkgWt-pUM"
+                                style="text-decoration: none"
+                              >
+                                <img
+                                  src="https://img.youtube.com/vi/uhEkgWt-pUM/maxresdefault.jpg"
+                                  alt="ניקוי קוד עם knip: הסרת JavaScript מת"
+                                  class="hover"
+                                  width="520"
+                                  border="0"
+                                />
                               </a>
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <!-- Article Headline  -->
-                            <td style="
+                            <td
+                              style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -854,18 +1233,28 @@
                                 font-size: 24px;
                                 text-align: right;
                                 line-height: 1.5;
-                              " align="left" class="play">
-                              <div dir="rtl">ניקוי קוד עם nip: הסרת JavaScript מת</div>
+                              "
+                              align="left"
+                              class="play"
+                            >
+                              <div dir="rtl">
+                                ניקוי קוד עם knip: הסרת JavaScript מת
+                              </div>
                             </td>
                             <!-- /Article Headline  -->
                           </tr>
                           <tr>
-                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td style="
+                            <td
+                              style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -873,53 +1262,93 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              " align="left" class="rale">
+                              "
+                              align="left"
+                              class="rale"
+                            >
                               <!-- Article Text  -->
                               <div dir="rtl">
-    <p>יום רביעי, שבע בערב, סיימתם את הריפקטור הענק, הכול נראה תקין, פתחתם PR. זה מצוין כי מחר חמישי ואתם מוכנים לסגור את המשימה 😅</p>
+                                יום רביעי, שבע בערב. סיימתם את הריפקטור הענק,
+                                הכול נראה תקין, פתחתם PR.<br />
+                                מחר חמישי ואתם מוכנים לסגור את המשימה 😅
+                                <br /><br />
+                                ואז קמים לבוקר חדש, עם 50 הערות על קוד מת שהראש
+                                צוות מבקשת למחוק.<br />
+                                אתם מוחקים, מגיע חמישי 16:00, מריצים ו... הכול
+                                נשבר 😭
+                                <br /><br />
+                                נשמע מוכר?<br />
+                                ריפקטור זה לא רק שינוי קוד – זה גם להבין מה אפשר
+                                למחוק באמת.<br />
+                                קבצים, dependencies, exports שנראים בשימוש – אבל
+                                לא באמת.
+                                <br />
+                                כאן נכנס knip – כלי שרואה את התמונה המלאה.<br />
+                                סורק את הפרויקט ומראה בדיוק מה אפשר להעיף בלי
+                                לחשוש:<br />
+                                ghost files, חבילות מיותרות, טיפוסים לא
+                                רלוונטיים ועוד.
+                                <br />
+                                יש גם production mode שמזהה קוד שנמצא רק בטסטים
+                                או ב-storybook.
+                                <br /><br />
+                                מריצים עם npx, או מכניסים ל-CI כדי לשמור על קוד
+                                נקי לאורך זמן.<br />
+                                רוצים אוטופיקס? גם את זה הוא יודע לעשות 🫴 (עם
+                                git!) 🧰
+                                <br />
+                                רוצים שה-PR הבא שלכם יהיה באמת נקי? תנו ל-knip
+                                צ'אנס ותראו מה הוא מוצא.
+                              </div>
 
-    <p>ואז הלכתם בלב שקט הביתה, קמתם בבוקר, וגיליתם 50 הערות על ה-PR על קוד מת שהראש צוות מבקשת שתמחקו.</p>
-
-    <p>טוב, התחלתם למחוק, הגענו לחמישי ב-16:00, אתם מריצים ו... הכול נשבר 😭</p>
-
-    <p>נשמע מוכר?</p>
-
-    <p>אחד האתגרים בריפקטור הוא להבין מה באמת כבר לא נחוץ - קבצים, dependencies, או exports שאף אחד לא משתמש בהם. חלקם עדיין נראים בשימוש, אבל בעצם לא.</p>
-
-    <p>וכאן נכנס nip – כלי שמבין את התמונה המלאה. הוא סורק את הפרויקט ומראה לכם בדיוק מה אפשר למחוק בלי לפחד: קבצי ghost, חבילות מיותרות, טיפוסי TypeScript לא רלוונטיים ועוד.</p>
-
-    <p>יש לו גם production mode שמזהה קוד שנמצא רק בטסטים או ב-storybook.</p>
-
-    <p>אפשר להריץ אותו עם npx, או להוסיף ל-CI שלכם כדי לשמור על קוד נקי לאורך זמן. ואם מתחשק לכם - הוא גם יודע לעשות autofix 🫴 (כן, עם git בבקשה!) 🧰</p>
-
-    <p>רוצים שה-PR הבא שלכם יהיה נקי באמת? תנו ל-nip צ'אנס ותראו מה הוא מוצא.</p>
-
-    <p>היי נדב, פוסט מעולה! 👏 סקרן לדעת, יצא לך להשוות את היכולות של nip מול שימוש בכלי AI (Curser/Copilot) שמבקשים מהם לאתר קוד "מת" או לא נחוץ בפרויקט? מעניין אותי אם יש יתרון בגישה הייעודית של הכלי. תודה</p>
-</div>
                               <!-- /Article Text  -->
                             </td>
                           </tr>
 
                           <tr>
-                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="30"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <td width="100%" align="center" class="">
-                              <table align="left" cellspacing="0" cellpadding="0" border="0" class="hover">
+                              <table
+                                align="left"
+                                cellspacing="0"
+                                cellpadding="0"
+                                border="0"
+                                class="hover"
+                              >
                                 <tr>
-                                  <td width="100%" align="center" class="" style="
+                                  <td
+                                    width="100%"
+                                    align="center"
+                                    class=""
+                                    style="
                                       background: #f1af00;
                                       border-radius: 5px;
-                                    " bgcolor="#F1AF00">
-                                    <table width="100%" align="left" cellspacing="0" cellpadding="0" style="
+                                    "
+                                    bgcolor="#F1AF00"
+                                  >
+                                    <table
+                                      width="100%"
+                                      align="left"
+                                      cellspacing="0"
+                                      cellpadding="0"
+                                      style="
                                         margin-right: 30px;
                                         mso-padding-left-alt: 15px;
                                         mso-padding-right-alt: 15px;
-                                      ">
+                                      "
+                                    >
                                       <tr>
-                                        <td height="35" style="
+                                        <td
+                                          height="35"
+                                          style="
                                             mso-padding-alt: 0px 10px 0px 10px;
                                             color: #ffffff;
                                             font-family: Helvetica, Arial,
@@ -927,13 +1356,20 @@
                                             font-weight: 700;
                                             font-size: 14px;
                                             text-transform: uppercase;
-                                          " align="center" class="pop">
-                                          <a href="https://www.youtube.com/watch?v&#x3D;uhEkgWt-pUM" target="_blank" style="
+                                          "
+                                          align="center"
+                                          class="pop"
+                                        >
+                                          <a
+                                            href="https://www.youtube.com/watch?v&#x3D;uhEkgWt-pUM"
+                                            target="_blank"
+                                            style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
                                               text-decoration: none;
-                                            ">
+                                            "
+                                          >
                                             למאמר המלא
                                           </a>
                                         </td>
@@ -945,21 +1381,34 @@
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="50"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="1" style="
+                            <td
+                              width="100%"
+                              height="1"
+                              style="
                                 font-size: 1px;
                                 line-height: 1px;
                                 background: #d7d7d7;
-                              " bgcolor="#D7D7D7;">
+                              "
+                              bgcolor="#D7D7D7;"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="50"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
@@ -972,8 +1421,14 @@
               <!-- /Article block -->
               <!-- Article block -->
               <tr>
-                <td style="font-size: 1px; line-height: 1px" width="100%" class="pad20">
-                  <table class="full" style="
+                <td
+                  style="font-size: 1px; line-height: 1px"
+                  width="100%"
+                  class="pad20"
+                >
+                  <table
+                    class="full"
+                    style="
                       width: 600px;
                       -webkit-border-top-left-radius: 20px;
                       -webkit-border-top-right-radius: 20px;
@@ -983,34 +1438,67 @@
                       border-top-right-radius: 20px;
                       background: #ffffff;
                       box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                    " width="600" cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff">
+                    "
+                    width="600"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="center"
+                    bgcolor="#ffffff"
+                  >
                     <tr>
                       <td width="100%" align="right" class="pad30">
-                        <table class="full" style="
+                        <table
+                          class="full"
+                          style="
                             width: 520px;
                             border-radius: 20px;
                             background: #ffffff;
-                          " width="520" cellspacing="0" cellpadding="0" border="0" align="center">
+                          "
+                          width="520"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          align="center"
+                        >
                           <tr>
-                            <td width="100%" height="40" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="40"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <td width="100%" class="imgfull radius10">
-                              <a href="https://x.com/akshay_pachaar/status/1954158220727263311" style="text-decoration: none">
-                                <img src="https://www.milesweb.com/blog/wp-content/uploads/2023/10/learn-code-online-for-free.png" alt="המעבר ל-AI Engineering: מדריך מעשי" class="hover" width="520" border="0" />
+                              <a
+                                href="https://x.com/akshay_pachaar/status/1954158220727263311"
+                                style="text-decoration: none"
+                              >
+                                <img
+                                  src="https://www.milesweb.com/blog/wp-content/uploads/2023/10/learn-code-online-for-free.png"
+                                  alt="המעבר ל-AI Engineering: מדריך מעשי"
+                                  class="hover"
+                                  width="520"
+                                  border="0"
+                                />
                               </a>
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <!-- Article Headline  -->
-                            <td style="
+                            <td
+                              style="
                                 color: #0a0a0a;
                                 font-family: 'Playfair Display', Georgia, Times,
                                   serif;
@@ -1018,18 +1506,28 @@
                                 font-size: 24px;
                                 text-align: right;
                                 line-height: 1.5;
-                              " align="left" class="play">
-                              <div dir="rtl">המעבר ל-AI Engineering: מדריך מעשי</div>
+                              "
+                              align="left"
+                              class="play"
+                            >
+                              <div dir="rtl">
+                                המעבר ל-AI Engineering: מדריך מעשי
+                              </div>
                             </td>
                             <!-- /Article Headline  -->
                           </tr>
                           <tr>
-                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="20"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td style="
+                            <td
+                              style="
                                 color: #000000;
                                 font-family: Helvetica, Arial, sans-serif,
                                   'Raleway';
@@ -1037,53 +1535,89 @@
                                 font-size: 14px;
                                 text-align: right;
                                 line-height: 24px;
-                              " align="left" class="rale">
+                              "
+                              align="left"
+                              class="rale"
+                            >
                               <!-- Article Text  -->
                               <div dir="rtl">
-    <p>התעייפתם מלשחק ב-AI כמו צעצוע? 🧸</p>
+                                התעייפתם מלשחק ב-AI כמו צעצוע? 🧸<br />
+                                עוד prompt, עוד hallucination, עוד תוצאה לא
+                                רלוונטית...<br />
+                                בסוף מגיע הרגע שרוצים להבין באמת מה קורה –
+                                ולבנות דברים שעובדים.
+                                <br /><br />
+                                בחור אחד שיתף איך עבר ל-AI Engineering לפני
+                                שנתיים – ומבחינתו זה היה המהלך הכי טוב בקריירה.
+                                <br />
+                                הוא לא התחיל מ-agents או RAGים, אלא מ-Python.<br />
+                                קורס בסיסי של Harvard, קורס קצר של Andrew Ng,
+                                וסרטונים של 3Blue1Brown על איך Transformers
+                                עובדים באמת.
+                                <br />
+                                ואז – קוד. הרבה קוד.<br />
+                                אנדרי קרפתי נתן ביטחון לבנות רשתות נוירונים,
+                                ו-Anthropic עזרו להבין איך מתכננים agents בלי
+                                מסגרת כבדה.
+                                <br /><br />
+                                אחר כך הגיע MCP – והוא כתב עליו מדריך חינמי
+                                שהגיע ל-40K הורדות.<br />
+                                הגיטהאב שלו התמלא בפרויקטים אמיתיים, והספרים
+                                שקרא חיברו לו את כל החלקים.
+                                <br /><br />
+                                אז אם גם אתם מרגישים שהגיע הזמן להבין, לא רק
+                                להשתמש – זו מפת דרכים פרקטית שמחברת בין עקרונות,
+                                קוד ויישום בעולם האמיתי 🔥🔥🔥
+                              </div>
 
-    <p>עוד prompt, עוד hallucination, עוד תוצאה לא רלוונטית... מתישהו מגיע הרגע שרוצים להבין באמת מה קורה מאחורי הקלעים - ולבנות דברים שעובדים.</p>
-
-    <p>אז יש פה בחור ששיתף איך עבר ל-AI Engineering לפני שנתיים - ומבחינתו זה היה המהלך הכי טוב שעשה בקריירה.</p>
-
-    <p>ממה הוא התחיל?</p>
-
-    <p>אז הוא לא התחיל מלהרים agents או לחבר ל-RAGים. הוא התחיל מ-Python בקורס בסיסי של Harvard. קורס קצר של Andrew Ng על AI בפייתון. כמה סרטונים מעולים של 3Blue1Brown שמסבירים איך Transformers באמת עובדים. ורק אז - קוד. הרבה קוד.</p>
-
-    <p>אנדרי קרפתי נתן לו את הביטחון לבנות רשתות נוירונים. ו-Anthropic עזרו להבין איך לתכנן agents חכמים בלי מסגרת כבדה.</p>
-
-    <p>ואז הגיע MCP - והוא כתב מדריך חינמי עם 40K הורדות, ואינספור אפשרויות לחבר בין מודלים לעולם האמיתי.</p>
-
-    <p>אבל הוא לא עצר שם. הגיטהאב שלו התמלא בפרויקטים אמיתיים, וספרים נוספים שקרא השלימו לו את התמונה המלאה.</p>
-
-    <p>אז אם גם אתם מרגישים שהגיע הזמן להבין, לא רק להשתמש - זו מפת דרכים סופר פרקטית שמחברת בין עקרונות, קוד ויישום בעולם האמיתי 🔥🔥🔥</p>
-
-    <p>💬 קיצרתי את זה - אבל התרד המלא שווה קליק:</p>
-</div>
                               <!-- /Article Text  -->
                             </td>
                           </tr>
 
                           <tr>
-                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="30"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
                             <td width="100%" align="center" class="">
-                              <table align="left" cellspacing="0" cellpadding="0" border="0" class="hover">
+                              <table
+                                align="left"
+                                cellspacing="0"
+                                cellpadding="0"
+                                border="0"
+                                class="hover"
+                              >
                                 <tr>
-                                  <td width="100%" align="center" class="" style="
+                                  <td
+                                    width="100%"
+                                    align="center"
+                                    class=""
+                                    style="
                                       background: #f1af00;
                                       border-radius: 5px;
-                                    " bgcolor="#F1AF00">
-                                    <table width="100%" align="left" cellspacing="0" cellpadding="0" style="
+                                    "
+                                    bgcolor="#F1AF00"
+                                  >
+                                    <table
+                                      width="100%"
+                                      align="left"
+                                      cellspacing="0"
+                                      cellpadding="0"
+                                      style="
                                         margin-right: 30px;
                                         mso-padding-left-alt: 15px;
                                         mso-padding-right-alt: 15px;
-                                      ">
+                                      "
+                                    >
                                       <tr>
-                                        <td height="35" style="
+                                        <td
+                                          height="35"
+                                          style="
                                             mso-padding-alt: 0px 10px 0px 10px;
                                             color: #ffffff;
                                             font-family: Helvetica, Arial,
@@ -1091,13 +1625,20 @@
                                             font-weight: 700;
                                             font-size: 14px;
                                             text-transform: uppercase;
-                                          " align="center" class="pop">
-                                          <a href="https://x.com/akshay_pachaar/status/1954158220727263311" target="_blank" style="
+                                          "
+                                          align="center"
+                                          class="pop"
+                                        >
+                                          <a
+                                            href="https://x.com/akshay_pachaar/status/1954158220727263311"
+                                            target="_blank"
+                                            style="
                                               color: #ffffff;
                                               display: block;
                                               line-height: 32px;
                                               text-decoration: none;
-                                            ">
+                                            "
+                                          >
                                             למאמר המלא
                                           </a>
                                         </td>
@@ -1109,21 +1650,34 @@
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="50"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="1" style="
+                            <td
+                              width="100%"
+                              height="1"
+                              style="
                                 font-size: 1px;
                                 line-height: 1px;
                                 background: #d7d7d7;
-                              " bgcolor="#D7D7D7;">
+                              "
+                              bgcolor="#D7D7D7;"
+                            >
                               &nbsp;
                             </td>
                           </tr>
                           <tr>
-                            <td width="100%" height="50" style="font-size: 1px; line-height: 1px">
+                            <td
+                              width="100%"
+                              height="50"
+                              style="font-size: 1px; line-height: 1px"
+                            >
                               &nbsp;
                             </td>
                           </tr>
@@ -1134,16 +1688,30 @@
                 </td>
               </tr>
               <!-- /Article block -->
+            </table>
+            <!-- footer -->
 
-          </table>
-          <!-- footer -->
-
-          <table align="center" bgcolor="#3D4750" border="0" cellpadding="0" cellspacing="0" class="wrap"
-            style="width: 800px; background: #3d4750" width="800">
-            <tbody>
-              <tr>
-                <td align="center" class="pad20">
-                  <table align="center" bgcolor="#EDEDED" border="0" cellpadding="0" cellspacing="0" class="full" style="
+            <table
+              align="center"
+              bgcolor="#3D4750"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              class="wrap"
+              style="width: 800px; background: #3d4750"
+              width="800"
+            >
+              <tbody>
+                <tr>
+                  <td align="center" class="pad20">
+                    <table
+                      align="center"
+                      bgcolor="#EDEDED"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="full"
+                      style="
                         width: 600px;
                         -webkit-border-bottom-right-radius: 20px;
                         -webkit-border-bottom-left-radius: 20px;
@@ -1153,123 +1721,181 @@
                         border-bottom-left-radius: 20px;
                         background: #ededed;
                         box-shadow: 0px 0px 25px rgba(201, 201, 201, 0.3);
-                      " width="600">
-                    <tbody>
-                      <tr>
-                        <td height="25" style="font-size: 1px; line-height: 1px" width="100%">
-                          &nbsp;
-                        </td>
-                      </tr>
+                      "
+                      width="600"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            height="25"
+                            style="font-size: 1px; line-height: 1px"
+                            width="100%"
+                          >
+                            &nbsp;
+                          </td>
+                        </tr>
 
-                      <tr>
-                        <td height="30" style="font-size: 1px; line-height: 1px" width="100%">
-                          &nbsp;
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td height="8" style="font-size: 1px; line-height: 1px" width="100%">
-                  &nbsp;
-                </td>
-              </tr>
-              <tr>
-                <td class="pad20" width="100%">
-                  <table align="center" border="0" cellpadding="0" cellspacing="0" class="full" style="width: 600px"
-                    width="600">
-                    <tbody>
-                      <tr>
-                        <td>
-
-
-                        </td>
-                      </tr>
-                      <tr>
-                        <td height="30" style="font-size: 1px; line-height: 1px" width="100%">
-                          &nbsp;
-                        </td>
-                      </tr>
-                      <tr>
-                        <td bgcolor="#5F6468;" height="1" style="
+                        <tr>
+                          <td
+                            height="30"
+                            style="font-size: 1px; line-height: 1px"
+                            width="100%"
+                          >
+                            &nbsp;
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    height="8"
+                    style="font-size: 1px; line-height: 1px"
+                    width="100%"
+                  >
+                    &nbsp;
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pad20" width="100%">
+                    <table
+                      align="center"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      class="full"
+                      style="width: 600px"
+                      width="600"
+                    >
+                      <tbody>
+                        <tr>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td
+                            height="30"
+                            style="font-size: 1px; line-height: 1px"
+                            width="100%"
+                          >
+                            &nbsp;
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            bgcolor="#5F6468;"
+                            height="1"
+                            style="
                               font-size: 1px;
                               line-height: 1px;
                               background: #5f6468;
-                            " width="100%">
-                          &nbsp;
-                        </td>
-                      </tr>
-                      <tr>
-                        <td height="30" style="font-size: 1px; line-height: 1px" width="100%">
-                          &nbsp;
-                        </td>
-                      </tr>
-                      <tr>
-                        <td align="center" width="100%">
-                          <a href="https://www.nsoftdev.com/" target="_blank" style="text-decoration: none"><img
-                              alt="nSoft" border="0" class="hover"
-                              src="https://media.licdn.com/dms/image/v2/D4D0BAQFeMnr__zt2Ew/company-logo_200_200/company-logo_200_200/0/1704995304827/nsoft_team_logo?e=1759363200&v=beta&t=GaqZEdFyRKfQQtqzzmMKJD2mksogOn3q1fCpg4w54_g"
-                              width="87" />
-                          </a>
-                        </td>
-                      </tr>
+                            "
+                            width="100%"
+                          >
+                            &nbsp;
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            height="30"
+                            style="font-size: 1px; line-height: 1px"
+                            width="100%"
+                          >
+                            &nbsp;
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="center" width="100%">
+                            <a
+                              href="https://www.nsoftdev.com/"
+                              target="_blank"
+                              style="text-decoration: none"
+                              ><img
+                                alt="nSoft"
+                                border="0"
+                                class="hover"
+                                src="https://media.licdn.com/dms/image/v2/D4D0BAQFeMnr__zt2Ew/company-logo_200_200/company-logo_200_200/0/1704995304827/nsoft_team_logo?e=1759363200&v=beta&t=GaqZEdFyRKfQQtqzzmMKJD2mksogOn3q1fCpg4w54_g"
+                                width="87"
+                              />
+                            </a>
+                          </td>
+                        </tr>
 
-                      <tr>
-                        <td align="left" class="rale" direction="rtl" style="
+                        <tr>
+                          <td
+                            align="left"
+                            class="rale"
+                            direction="rtl"
+                            style="
                               color: #ffffff;
                               font-family: 'Raleway', Georgia, Times, serif;
                               font-weight: 400;
                               font-size: 12px;
                               text-align: center;
                               line-height: 1.5;
-                            ">
-
-                          <br />
-                          בואו לומר שלום
-                          <a href="https://www.linkedin.com/in/nadavleb/" style="color: #f1af00; text-decoration: none">
-                            בלינקדאין</a>
-                          <br />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td align="left" class="rale" direction="rtl" style="
+                            "
+                          >
+                            <br />
+                            בואו לומר שלום
+                            <a
+                              href="https://www.linkedin.com/in/nadavleb/"
+                              style="color: #f1af00; text-decoration: none"
+                            >
+                              בלינקדאין</a
+                            >
+                            <br />
+                          </td>
+                        </tr>
+                        <tr>
+                          <td
+                            align="left"
+                            class="rale"
+                            direction="rtl"
+                            style="
                               color: #ffffff;
                               font-family: 'Raleway', Georgia, Times, serif;
                               font-weight: 400;
                               font-size: 12px;
                               text-align: center;
                               line-height: 1.5;
-                            ">
-                          <br />
+                            "
+                          >
+                            <br />
 
-                          <p>
-                            המייל הזה נשלח אליך מכיוון שהיינו בקשר&nbsp;בשנים
-                            האחרונות אונליין או אופליין. אם את/ה לא מעוניין/ת
-                            לקבל עוד מיילים אפשר להסיר את עצמיך מהרשימות
-                            <a href="{{unsubscribe_url}}" style="color: #f1af00; text-decoration: none">כאן</a>
-                          </p>
-                          <br />
+                            <p>
+                              המייל הזה נשלח אליך מכיוון שהיינו בקשר&nbsp;בשנים
+                              האחרונות אונליין או אופליין. אם את/ה לא מעוניין/ת
+                              לקבל עוד מיילים אפשר להסיר את עצמיך מהרשימות
+                              <a
+                                href="{{unsubscribe_url}}"
+                                style="color: #f1af00; text-decoration: none"
+                                >כאן</a
+                              >
+                            </p>
+                            <br />
 
-                          <p><em>(אני אעלב כמובן אבל זאת זכותך המלאה)</em></p>
-                          {{message_content}}
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </td>
-              </tr>
-              <tr>
-                <td height="30" style="font-size: 1px; line-height: 1px" width="100%">
-                  &nbsp;
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</body>
-
+                            <p><em>(אני אעלב כמובן אבל זאת זכותך המלאה)</em></p>
+                            {{message_content}}
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    height="30"
+                    style="font-size: 1px; line-height: 1px"
+                    width="100%"
+                  >
+                    &nbsp;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
